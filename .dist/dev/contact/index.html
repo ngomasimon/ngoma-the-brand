@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 <title>Emma Bennet / Contact me</title>
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-05T15:22:28.174Z">
+<meta name="date.updated" content="2025-04-05T20:10:28.828Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="author" content="Emma Bennet">
 <meta property="og:title" content="Contact me">
@@ -122,11 +122,13 @@ body {
       background: #fff;
       border: none;
       border-radius: .5rem;
-      width: 100%;
+      width: 98%;
       margin: 0 auto;
       padding: 10px;
+      transition: transform 2s ease-out, opacity .3s ease-out;
       position: fixed;
-      top: 0;
+      top: 5px;
+      transform: translateY(20px);
       box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
 
       &::backdrop {
@@ -413,7 +415,7 @@ button, [role="button"] {
   <nav><a href="/about/">About</a>
 <a href="/services/">Services</a>
 <a href="/projects/">Projects</a>
-<a href="/blog/">Blog</a>
+<a href="/all-blogs">Blog</a>
 <a href="/contact/">Contact</a></nav>
   <button popovertarget="menu" aria-label="Toggle menu">
      <img src="/img/burger-menu.svg">
@@ -427,7 +429,7 @@ button, [role="button"] {
   <nav><a href="/about/">About</a>
 <a href="/services/">Services</a>
 <a href="/projects/">Projects</a>
-<a href="/blog/">Blog</a>
+<a href="/all-blogs">Blog</a>
 <a href="/contact/">Contact</a></nav>
 </dialog>
 </header>

@@ -4,17 +4,15 @@
 
   <head>
     <meta charset="utf-8">
-<title>Emma Bennet / Minimalist, UX developer, designer, urban explorer</title>
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-05T17:28:36.373Z">
+<meta name="date.updated" content="2025-04-05T21:43:12.572Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="I&apos;m Emma Bennett, a design engineer from Berlin. I build websites that are exceptionally well-designed &#x2014; inside, and outside.">
+<meta name="description" content="![Image 1](https://picsum.photos/seed/1/1200/800)">
 <meta name="author" content="Emma Bennet">
-<meta property="og:title" content="Minimalist, UX developer, designer, urban explorer">
-<meta property="og:description" content="I&apos;m Emma Bennett, a design engineer from Berlin. I build websites that are exceptionally well-designed &#x2014; inside, and outside.">
+<meta property="og:description" content="![Image 1](https://picsum.photos/seed/1/1200/800)">
 <meta property="og:image" content="https://simple-blog.nuejs.org/img/og_emma.png">
 <meta name="nue:components" content=" ">
-<meta name="nue:include" content="motion">
+<meta name="nue:include" content="index motion">
 <meta name="nue:globals" content="@global">
 <meta name="nue:libs" content="@library">
 <link rel="icon" type="image/jpg" href="/img/favicon.jpg">
@@ -316,6 +314,61 @@ p, li {
   }
 }
 </style>
+<style href="/@library/index.css">body {
+  margin: 0;
+  padding: 0;
+
+  & > header {
+    padding: 2% 5%;
+  }
+
+  & article {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  & article > section:first-of-type {
+    background-color: #f8f8f8;
+    max-width: none;
+    margin: 0;
+  }
+
+  & article > section:first-of-type p:first-of-type {
+    background-color: #c42222;
+    border-right: 2px solid #ccc;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    height: 100vh;
+    display: grid;
+  }
+
+  & article > section:first-of-type p:first-of-type img {
+    width: 100%;
+    height: auto;
+  }
+
+  & article > section:first-of-type p:not(:first-of-type) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    display: grid;
+  }
+
+  & article > section:first-of-type p:not(:first-of-type) img {
+    width: 100%;
+    height: auto;
+  }
+
+  & article > section:nth-of-type(2) {
+    border-top: 2px solid #ccc;
+    max-width: none;
+  }
+
+  & article > section:nth-of-type(3) {
+    max-width: none;
+    padding-bottom: 2rem;
+  }
+}
+</style>
 <style href="/@library/motion.css">header, h1, h1 + p, h1 + p + * {
   filter: none;
   opacity: 1;
@@ -389,8 +442,8 @@ article {
 
     <article>
       
-      <section><h1>Minimalist, UX developer, designer, urban explorer</h1>
-<p>I&apos;m Emma Bennett, a design engineer from Berlin. I build websites that are exceptionally well-designed &#x2014; inside, and outside.</p></section>
+      <section><p><img src="https://picsum.photos/seed/1/1200/800" alt="Image 1" loading="lazy"> <img src="https://picsum.photos/seed/2/1200/800" alt="Image 2" loading="lazy"></p>
+<p><img src="https://picsum.photos/seed/3/600/400" alt="Image 3" loading="lazy"> <img src="https://picsum.photos/seed/4/600/400" alt="Image 4" loading="lazy"> <img src="https://picsum.photos/seed/5/600/400" alt="Image 5" loading="lazy"> <img src="https://picsum.photos/seed/6/600/400" alt="Image 6" loading="lazy"> <img src="https://picsum.photos/seed/7/600/400" alt="Image 7" loading="lazy"> <img src="https://picsum.photos/seed/8/600/400" alt="Image 8" loading="lazy"></p></section>
       
     </article>
 

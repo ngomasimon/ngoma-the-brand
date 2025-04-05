@@ -1,6 +1,7 @@
-
 /* because layout.css is excluded */
-* { box-sizing: border-box }
+* {
+  box-sizing: border-box;
+}
 
 /* layout */
 body {
@@ -16,7 +17,7 @@ body {
   main {
     background: radial-gradient(transparent, #0009);
     backdrop-filter: blur(3px);
-    transition-delay: .5s;
+    transition-delay: 0.5s;
     padding-top: 22vh;
     height: 100vh;
   }
@@ -42,8 +43,11 @@ body {
 }
 
 /* motion */
-main, article {
-  transition: .5s;
+main,
+article {
+  transition: 0.5s;
   opacity: 1;
-  @starting-style { opacity: 0  }
+  @starting-style {
+    opacity: 0;
+  }
 }

@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  & > header {
+    padding: 2% 5%;
+  }
+
+  & article {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  & article > section:first-of-type {
+    background-color: #f8f8f8;
+    max-width: none;
+    margin: 0;
+  }
+
+  & article > section:first-of-type p:first-of-type {
+    border-right: 2px solid #ccc;
+    grid-template-columns: 1fr 1fr;
+    height: 80vh;
+    display: grid;
+  }
+
+  & article > section:first-of-type p:first-of-type img {
+    width: 100%;
+    height: 80vh;
+  }
+
+  & article > section:first-of-type p:not(:first-of-type) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    display: grid;
+  }
+
+  & article > section:first-of-type p:not(:first-of-type) img {
+    width: 100%;
+    height: auto;
+  }
+
+  & article > section:nth-of-type(2) {
+    border-top: 2px solid #ccc;
+    max-width: none;
+  }
+
+  & article > section:nth-of-type(3) {
+    max-width: none;
+    padding-bottom: 2rem;
+  }
+}
