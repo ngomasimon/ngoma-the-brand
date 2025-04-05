@@ -25,7 +25,7 @@ navigation:
     - About: /about/
     - Services: /services/
     - Projects: /projects/
-    - Blog: /blog/
+    - Blog: /all-blogs
     - Contact: /contact/
   logo: /img/avatar.jpg
   menu: /img/burger-menu.svg
