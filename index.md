@@ -1,5 +1,5 @@
 ---
-include: [ gallery, motion ]
+include: [  motion ]
 ---
 
 # Minimalist, UX developer, designer, urban explorer
