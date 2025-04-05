@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=https://json.schemastore.org/nuejs-site.json
+
+globals: ["@global"]
+libs: ["@library"]
+
+view_transitions: true
+native_css_nesting: true
+inline_css: true
+sections: true
+
+title_template: "Emma Bennet / %s"
+og_image: /img/og_emma.png
+author: Emma Bennet
+favicon: /img/favicon.jpg
+description: Minimalist, designer, and UX developer
+port: 8083
+
+# OG image
+origin: https://simple-blog.nuejs.org
+og: /img/og.jpg
+
+
+navigation:
+  header:
+    - About: /about/
+    - Services: /services/
+    - Projects: /projects/
+    - Blog: /blog/
+    - Contact: /contact/
+  logo: /img/avatar.jpg
+
+  footer:
+    services:
+    - Social Media Marketing : /social-media
+    - SEO Optimization : /seo-optimization
+    - Content Strategy : /content-strategy
+    - Paid Advertising : /paid-advertising
+    
+    studies:
+    - Ecommerce growth: /ecommerce-growth
+    - B2B lead generation: /b2b-lead-generation
+    - Brand awareness: /brand-awareness
+    - Social media engagement: /social-media-engagement
+
+    resources:
+    - Marketing Blog: /blog
+    - Free guides: /free-guides
+    - Marketing Tools: /marketing-tools
+
+    contact:
+    - image: /img/x-social-media.svg
+      url: //x.com/cymone_rayan
+      alt: Twitter (X) profile
+      size: 22 x 22
+    - image: /img/linkedin.svg
+      url: //linkedin.com/in/ngomasimon3
+      alt: LinkedIn profile
+      size: 26 x 26
+    - image: /img/call.svg
+      url: //calendly.com/ngomasimon3/60min
+      alt: Schedule a call
+      size: 26 x 26
+    - image: /img/gmail.svg
+      url: mailto:ngomasimon3@gmail.com
+      alt: Email
+      size: 26 x 26
+
+
+
+
+  

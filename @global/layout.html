@@ -1,0 +1,34 @@
+<header>
+  <a href="/"><img :src="navigation.logo">Simon Ngoma</a>
+  <navi :items="navigation.header"/>
+  <button popovertarget="menu">Menu</button>
+</header>
+
+
+  <footer>
+    <div>
+      <div>
+        <h3>Services</h3>
+         <navi :items="navigation.footer.services"/>
+      </div>
+      <div>
+        <h3>Case Studies</h3>
+        <navi :items="navigation.footer.studies"/>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <navi :items="navigation.footer.resources"/>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <navi :items="navigation.footer.contact"/>
+      </div>
+    </div>
+    <div>
+      <p>© { new Date().getFullYear() } { name }. All rights reserved.</p>
+      <p>Website by <a href="https://www.daveclintonn.cc">David Clinton</a></p>
+    </div>
+  </footer>
+
+
+
