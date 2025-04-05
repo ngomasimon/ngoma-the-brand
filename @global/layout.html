@@ -1,34 +1,50 @@
 <header>
-  <a href="/"><img :src="navigation.logo">Simon Ngoma</a>
+  <a href="/" aria-label="Simon Ngoma Home">
+    <img :src="navigation.logo"/>
+    Simon Ngoma
+  </a>
   <navi :items="navigation.header"/>
-  <button popovertarget="menu">Menu</button>
+  <button popovertarget="menu" aria-label="Toggle menu">
+     <img :src="navigation.menu"/>
+  </button>
+<dialog id="menu" popover>
+  <button class="action" popovertarget="menu">
+    <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30"
+      height="30" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M6 18 17.94 6M18 18 6.06 6" />
+    </svg>
+  </button>
+  <navi :items="navigation.header"/>
+</dialog>
 </header>
 
 
-  <footer>
-    <div>
-      <div>
-        <h3>Services</h3>
-         <navi :items="navigation.footer.services"/>
-      </div>
-      <div>
-        <h3>Case Studies</h3>
-        <navi :items="navigation.footer.studies"/>
-      </div>
-      <div>
-        <h3>Resources</h3>
-        <navi :items="navigation.footer.resources"/>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <navi :items="navigation.footer.contact"/>
-      </div>
-    </div>
-    <div>
-      <p>© { new Date().getFullYear() } { name }. All rights reserved.</p>
-      <p>Website by <a href="https://www.daveclintonn.cc">David Clinton</a></p>
-    </div>
-  </footer>
+<footer>
+  <nav>
+    <section>
+      <h3>Services</h3>
+      <navi :items="navigation.footer.services"/>
+    </section>
+    <section>
+      <h3>Case Studies</h3>
+      <navi :items="navigation.footer.studies"/>
+    </section>
+    <section>
+      <h3>Resources</h3>
+      <navi :items="navigation.footer.resources"/>
+    </section>
+    <section>
+      <h3>Contact</h3>
+      <navi :items="navigation.footer.contact"/>
+    </section>
+  </nav>
+  <small>
+    <p>© { new Date().getFullYear() } { name }. All rights reserved.</p>
+    <p>Website by <a href="https://www.daveclintonn.cc">David Clinton</a></p>
+  </small>
+</footer>
+
 
 
 

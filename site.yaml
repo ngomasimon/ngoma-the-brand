@@ -28,6 +28,7 @@ navigation:
     - Blog: /blog/
     - Contact: /contact/
   logo: /img/avatar.jpg
+  menu: /img/burger-menu.svg
 
   footer:
     services:
