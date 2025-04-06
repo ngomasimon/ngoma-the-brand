@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-06T06:26:48.593Z">
+<meta name="date.updated" content="2025-04-06T06:29:09.906Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Welcome to the Gallery">
+<meta name="description" content="[Get Started](#)">
 <meta name="author" content="Emma Bennet">
-<meta property="og:description" content="Welcome to the Gallery">
+<meta property="og:description" content="[Get Started](#)">
 <meta property="og:image" content="https://simple-blog.nuejs.org/img/og_emma.png">
 <meta name="nue:components" content=" ">
 <meta name="nue:include" content="index motion">
@@ -394,10 +394,6 @@ p, li {
   font-size: 16px;
 }
 
-body > header {
-  padding: 2% 5%;
-}
-
 article {
   width: 100%;
   max-width: 100%;
@@ -414,35 +410,68 @@ article > section:first-of-type p:first-of-type {
   grid-template-columns: 1fr;
   height: auto;
   margin: 0;
+  padding: 0;
   display: grid;
+  position: relative;
+}
+
+article > section:first-of-type p:first-of-type:before {
+  content: "Welcome to the Gallery Explore a curated selection of beautiful images. Scroll down to see more.";
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  width: 90%;
+  max-width: 600px;
+  padding: 1rem;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+article > section:first-of-type p:first-of-type {
+  color: rgba(0, 0, 0, 0);
+}
+
+article > section:first-of-type p:first-of-type a {
+  color: #000;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 4rem;
+  padding: .75rem 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color .3s;
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+article > section:first-of-type p:first-of-type a:hover {
+  background-color: #f0f0f0;
 }
 
 article > section:first-of-type p:first-of-type img {
   object-fit: cover;
   width: 100%;
   height: 50vh;
+  display: block;
 }
 
-article > section:first-of-type p:not(:first-of-type) {
+article > section:first-of-type p:nth-of-type(2) {
   grid-template-columns: 1fr;
   gap: .5rem;
   padding: 1rem;
   display: grid;
 }
 
-article > section:first-of-type p:not(:first-of-type) img {
+article > section:first-of-type p:nth-of-type(2) img {
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
-}
-
-article > section:nth-of-type(2) {
-  max-width: none;
-}
-
-article > section:nth-of-type(3) {
-  max-width: none;
-  padding: 1rem 1rem 2rem;
 }
 
 @media screen and (width >= 768px) {
@@ -455,8 +484,12 @@ article > section:nth-of-type(3) {
     height: 60vh;
   }
 
-  article > section:first-of-type p:not(:first-of-type) {
+  article > section:first-of-type p:nth-of-type(2) {
     grid-template-columns: 1fr 1fr;
+  }
+
+  article > section:first-of-type p:first-of-type:before {
+    font-size: 1.25rem;
   }
 }
 
@@ -468,31 +501,26 @@ article > section:nth-of-type(3) {
   }
 
   article > section:first-of-type p:first-of-type img {
-    height: 100%;
+    height: 100vh;
   }
 
-  article > section:first-of-type p:not(:first-of-type) {
+  article > section:first-of-type p:nth-of-type(2) {
     grid-template-columns: 1fr 1fr;
     padding: 2rem;
   }
 
-  article > section:first-of-type p:not(:first-of-type) img {
+  article > section:first-of-type p:nth-of-type(2) img {
     margin-bottom: 0;
   }
 
-  article > section:nth-of-type(2), article > section:nth-of-type(3) {
-    padding: 2rem;
+  article > section:first-of-type p:first-of-type:before {
+    font-size: 1.5rem;
   }
 }
 
 @media screen and (width >= 1440px) {
-  article > section:first-of-type p:not(:first-of-type) {
+  article > section:first-of-type p:nth-of-type(2) {
     grid-template-columns: repeat(2, 1fr);
-    max-width: none;
-    margin: 0 auto;
-  }
-
-  article > section:nth-of-type(2), article > section:nth-of-type(3) {
     max-width: none;
     margin: 0 auto;
   }
@@ -571,7 +599,7 @@ article {
 
     <article>
       
-      <section><p>Welcome to the Gallery Explore a curated selection of beautiful images. Scroll down to see more. <a href="#">Get Started</a> <img src="https://picsum.photos/seed/1/1200/800" alt="Image 1" loading="lazy"> <img src="https://picsum.photos/seed/2/1200/800" alt="Image 2" loading="lazy"></p>
+      <section><p><a href="#">Get Started</a> <img src="https://picsum.photos/seed/1/1200/800" alt="Image 1" loading="lazy"> <img src="https://picsum.photos/seed/2/1200/800" alt="Image 2" loading="lazy"></p>
 <p><img src="https://picsum.photos/seed/3/600/400" alt="Image 3" loading="lazy"> <img src="https://picsum.photos/seed/4/600/400" alt="Image 4" loading="lazy"> <img src="https://picsum.photos/seed/5/600/400" alt="Image 5" loading="lazy"> <img src="https://picsum.photos/seed/6/600/400" alt="Image 6" loading="lazy"> <img src="https://picsum.photos/seed/7/600/400" alt="Image 7" loading="lazy"> <img src="https://picsum.photos/seed/8/600/400" alt="Image 8" loading="lazy"></p></section>
       
     </article>

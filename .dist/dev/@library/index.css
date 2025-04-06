@@ -5,7 +5,7 @@ body {
 }
 
 body > header {
-  padding: 2% 5%;
+  padding: 2% 4%;
 }
 
 article {
@@ -13,46 +13,116 @@ article {
   max-width: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 article > section:first-of-type {
   background-color: #f3f4f3;
   max-width: none;
+  position: relative;
 }
 
 article > section:first-of-type p:first-of-type {
+  color: rgba(0, 0, 0, 0);
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5));
   grid-template-columns: 1fr;
-  height: auto;
+  height: 50vh;
   margin: 0;
+  padding: 0;
   display: grid;
+  position: relative;
+}
+
+article > section:first-of-type p:first-of-type:before {
+  content: "Curated Collection";
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+  font-size: .875rem;
+  font-weight: 400;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+article > section:first-of-type p:first-of-type:after {
+  content: "Welcome to the Gallery";
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  letter-spacing: -.5px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, .4);
+  font-size: 1.75rem;
+  font-weight: 700;
+  position: absolute;
+  bottom: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+article > section:first-of-type p:first-of-type > span.overlay {
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  flex-direction: column;
+  gap: .5rem;
+  width: 90%;
+  max-width: 600px;
+  padding: 1rem;
+  display: flex;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+article > section:first-of-type p:first-of-type a {
+  color: #333;
+  letter-spacing: .5px;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, .95);
+  border-radius: 6px;
+  padding: .875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .3s;
+  display: inline-block;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+}
+
+article > section:first-of-type p:first-of-type a:hover {
+  background-color: #fff;
+  transform: translateX(-50%)scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .2);
 }
 
 article > section:first-of-type p:first-of-type img {
   object-fit: cover;
   width: 100%;
   height: 50vh;
+  display: block;
 }
 
-article > section:first-of-type p:not(:first-of-type) {
+article > section:first-of-type p:nth-of-type(2) {
   grid-template-columns: 1fr;
   gap: .5rem;
   padding: 1rem;
   display: grid;
 }
 
-article > section:first-of-type p:not(:first-of-type) img {
+article > section:first-of-type p:nth-of-type(2) img {
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
-}
-
-article > section:nth-of-type(2) {
-  max-width: none;
-}
-
-article > section:nth-of-type(3) {
-  max-width: none;
-  padding: 1rem 1rem 2rem;
 }
 
 @media screen and (width >= 768px) {
@@ -65,8 +135,20 @@ article > section:nth-of-type(3) {
     height: 60vh;
   }
 
-  article > section:first-of-type p:not(:first-of-type) {
+  article > section:first-of-type p:nth-of-type(2) {
     grid-template-columns: 1fr 1fr;
+  }
+
+  article > section:first-of-type p:first-of-type:before {
+    font-size: 1rem;
+  }
+
+  article > section:first-of-type p:first-of-type:after {
+    font-size: 2rem;
+  }
+
+  article > section:first-of-type p:first-of-type a:before {
+    font-size: 1.1rem;
   }
 }
 
@@ -78,31 +160,34 @@ article > section:nth-of-type(3) {
   }
 
   article > section:first-of-type p:first-of-type img {
-    height: 100%;
+    height: 100vh;
   }
 
-  article > section:first-of-type p:not(:first-of-type) {
+  article > section:first-of-type p:nth-of-type(2) {
     grid-template-columns: 1fr 1fr;
     padding: 2rem;
   }
 
-  article > section:first-of-type p:not(:first-of-type) img {
+  article > section:first-of-type p:nth-of-type(2) img {
     margin-bottom: 0;
   }
 
-  article > section:nth-of-type(2), article > section:nth-of-type(3) {
-    padding: 2rem;
+  article > section:first-of-type p:first-of-type:before {
+    font-size: 1.1rem;
+  }
+
+  article > section:first-of-type p:first-of-type:after {
+    font-size: 2.5rem;
+  }
+
+  article > section:first-of-type p:first-of-type a:before {
+    font-size: 1.25rem;
   }
 }
 
 @media screen and (width >= 1440px) {
-  article > section:first-of-type p:not(:first-of-type) {
+  article > section:first-of-type p:nth-of-type(2) {
     grid-template-columns: repeat(2, 1fr);
-    max-width: none;
-    margin: 0 auto;
-  }
-
-  article > section:nth-of-type(2), article > section:nth-of-type(3) {
     max-width: none;
     margin: 0 auto;
   }
