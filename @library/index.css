@@ -2,10 +2,13 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  line-height: 1.6;
 }
 
 body > header {
-  padding: 2% 4%;
+  padding: clamp(1rem, 2vw, 2rem) clamp(2rem, 4vw, 4rem);
+  position: relative;
+  z-index: 2;
 }
 
 article {
@@ -20,6 +23,7 @@ article > section:nth-of-type(1) {
   background-color: rgb(243, 244, 243);
   max-width: none;
   position: relative;
+  width: 100%;
 }
 
 article > section:nth-of-type(1) p:first-of-type {
@@ -27,26 +31,28 @@ article > section:nth-of-type(1) p:first-of-type {
   display: grid;
   grid-template-columns: 1fr;
   height: 50vh;
+  min-height: 400px;
   margin: 0;
   padding: 0;
   color: transparent;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.5)
+    rgba(0, 0, 0, 0.6)
   );
+  z-index: 1;
 }
 
 article > section:nth-of-type(1) p:first-of-type::before {
   content: "Curated Collection";
   position: absolute;
-  bottom: 30%;
+  bottom: clamp(20%, 10vw, 30%);
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   color: #ffffff;
   z-index: 2;
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -56,13 +62,13 @@ article > section:nth-of-type(1) p:first-of-type::before {
 article > section:nth-of-type(1) p:first-of-type::after {
   content: "Welcome to the Gallery";
   position: absolute;
-  bottom: 35%;
+  bottom: clamp(15%, 8vw, 25%);
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   color: #ffffff;
   z-index: 2;
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
   font-weight: 700;
   letter-spacing: -0.5px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
@@ -70,33 +76,33 @@ article > section:nth-of-type(1) p:first-of-type::after {
 
 article > section:nth-of-type(1) p:first-of-type > span.overlay {
   position: absolute;
-  bottom: 30%;
+  bottom: clamp(15%, 8vw, 25%);
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   color: white;
-  z-index: 1;
-  padding: 1rem;
-  width: 90%;
+  z-index: 2;
+  padding: clamp(0.5rem, 1.5vw, 1rem);
+  width: clamp(80%, 90vw, 90%);
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: clamp(0.25rem, 1vw, 0.5rem);
 }
 
 article > section:nth-of-type(1) p:first-of-type a {
   position: absolute;
-  bottom: 20%;
+  bottom: clamp(5%, 5vw, 15%);
   left: 50%;
   transform: translateX(-50%);
   display: inline-block;
-  padding: 0.875rem 2rem;
+  padding: clamp(0.75rem, 1.5vw, 0.875rem) clamp(1.5rem, 2vw, 2rem);
   background-color: rgba(255, 255, 255, 0.95);
   color: #333333;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   z-index: 2;
@@ -111,48 +117,61 @@ article > section:nth-of-type(1) p:first-of-type a:hover {
 
 article > section:nth-of-type(1) p:first-of-type img {
   width: 100%;
-  height: 50vh;
+  height: 100%;
   object-fit: cover;
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 article > section:nth-of-type(1) p:nth-of-type(2) {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.5rem;
-  padding: 1rem;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: clamp(0.5rem, 1vw, 1rem);
+  padding: clamp(0.5rem, 2vw, 1rem);
+  position: relative; /* Ensure it stays in flow */
+  z-index: 1; /* Keep above background elements */
 }
 
 article > section:nth-of-type(1) p:nth-of-type(2) img {
   width: 100%;
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
+  display: block; /* Ensure images stack vertically */
+  position: relative; /* Keep in normal flow */
+  z-index: 1; /* Ensure visibility */
+}
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
+  article > section:nth-of-type(1) p:nth-of-type(2) {
+    grid-template-columns: 1fr; /* Force single column on mobile */
+    padding: clamp(0.5rem, 2vw, 1rem);
+  }
+
+  article > section:nth-of-type(1) p:nth-of-type(2) img {
+    position: relative; /* Ensure images stay in flow */
+    width: 100%;
+    height: auto;
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  }
 }
 
 @media screen and (min-width: 768px) {
   article > section:nth-of-type(1) p:first-of-type {
     grid-template-columns: 1fr 1fr;
     height: 60vh;
-  }
-
-  article > section:nth-of-type(1) p:first-of-type img {
-    height: 60vh;
+    min-height: 500px;
   }
 
   article > section:nth-of-type(1) p:nth-of-type(2) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on tablet+ */
   }
 
-  article > section:nth-of-type(1) p:first-of-type::before {
-    font-size: 1rem;
-  }
-
-  article > section:nth-of-type(1) p:first-of-type::after {
-    font-size: 2rem;
-  }
-
-  article > section:nth-of-type(1) p:first-of-type a::before {
-    font-size: 1.1rem;
+  article > section:nth-of-type(1) p:nth-of-type(2) img {
+    margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
   }
 }
 
@@ -160,39 +179,30 @@ article > section:nth-of-type(1) p:nth-of-type(2) img {
   article > section:nth-of-type(1) p:first-of-type {
     grid-template-columns: 1fr 1fr;
     border-right: 2px solid #ccc;
-    height: 100vh;
-  }
-
-  article > section:nth-of-type(1) p:first-of-type img {
-    height: 100vh;
+    height: 80vh;
+    min-height: 600px;
   }
 
   article > section:nth-of-type(1) p:nth-of-type(2) {
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: clamp(1rem, 2vw, 2rem);
   }
 
   article > section:nth-of-type(1) p:nth-of-type(2) img {
-    margin-bottom: 0;
-  }
-
-  article > section:nth-of-type(1) p:first-of-type::before {
-    font-size: 1.1rem;
-  }
-
-  article > section:nth-of-type(1) p:first-of-type::after {
-    font-size: 2.5rem;
-  }
-
-  article > section:nth-of-type(1) p:first-of-type a::before {
-    font-size: 1.25rem;
+    margin-bottom: 0; /* Side-by-side on desktop */
   }
 }
 
 @media screen and (min-width: 1440px) {
+  article > section:nth-of-type(1) p:first-of-type {
+    height: 100vh;
+    min-height: 700px;
+  }
+
   article > section:nth-of-type(1) p:nth-of-type(2) {
     grid-template-columns: repeat(2, 1fr);
     max-width: none;
     margin: 0 auto;
+    padding: clamp(1.5rem, 2vw, 2.5rem);
   }
 }
