@@ -1,16 +1,18 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 18px; /* Increased base font size */
+  line-height: 1.8; /* Improved readability */
 }
 
+/* Header */
 body > header {
-  padding: clamp(1rem, 2vw, 2rem) clamp(2rem, 4vw, 4rem);
+  padding: clamp(1.5rem, 3vw, 3rem) clamp(2.5rem, 5vw, 5rem);
   position: relative;
   z-index: 2;
 }
 
+/* Article */
 article {
   margin: 0;
   padding: 0;
@@ -21,61 +23,64 @@ article {
 
 article > section:nth-of-type(1) {
   background-color: rgb(243, 244, 243);
-  max-width: none;
+  max-width: none; /* Preserved */
   position: relative;
   width: 100%;
 }
 
+/* Hero Section */
 article > section:nth-of-type(1) p:first-of-type {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns for side-by-side images */
-  height: 50vh;
-  min-height: 400px;
+  grid-template-columns: 1fr 1fr;
+  height: 60vh;
+  min-height: 450px;
   margin: 0;
   padding: 0;
   color: transparent;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.6)
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.65)
   );
   z-index: 1;
-  overflow: hidden; /* Prevent overflow */
+  overflow: hidden;
 }
 
+/* Welcome Text */
 article > section:nth-of-type(1) p:first-of-type::before {
-  content: "Curated Collection";
+  content: "Welcome to my Portfolio";
   position: absolute;
-  bottom: clamp(20%, 10vw, 30%);
+  bottom: clamp(28%, 14vw, 40%);
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   color: #ffffff;
   z-index: 2;
-  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* Increased font size */
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Brand Name */
 article > section:nth-of-type(1) p:first-of-type::after {
-  content: "Welcome to the Gallery";
+  content: "NGOMA THE BRAND";
   position: absolute;
-  bottom: clamp(15%, 8vw, 25%);
+  bottom: clamp(18%, 10vw, 30%);
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   color: #ffffff;
   z-index: 2;
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-size: clamp(2rem, 4.5vw, 3rem); /* Increased font size */
   font-weight: 700;
-  letter-spacing: -0.5px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.2px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* Vertical line between the first two images */
+/* Vertical Divider */
 article > section:nth-of-type(1) p:first-of-type > img:nth-child(2)::after {
   content: "";
   position: absolute;
@@ -84,49 +89,52 @@ article > section:nth-of-type(1) p:first-of-type > img:nth-child(2)::after {
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
-  background-color: #ccc; /* Vertical line color */
-  z-index: 0; /* Behind images but above gradient */
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 0;
 }
 
+/* CTA Button */
 article > section:nth-of-type(1) p:first-of-type a {
   position: absolute;
-  bottom: clamp(5%, 5vw, 15%);
+  bottom: clamp(8%, 6vw, 15%);
   left: 50%;
   transform: translateX(-50%);
   display: inline-block;
-  padding: clamp(0.75rem, 1.5vw, 0.875rem) clamp(1.5rem, 2vw, 2rem);
+  padding: clamp(0.625rem, 1.5vw, 1rem) clamp(1.25rem, 2vw, 2rem);
   background-color: rgba(255, 255, 255, 0.95);
-  color: #333333;
+  color: #222222;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 600;
-  font-size: clamp(0.875rem, 1.5vw, 1rem);
-  letter-spacing: 0.5px;
+  font-size: clamp(1rem, 2vw, 1.25rem); /* Increased font size */
+  letter-spacing: 0.8px;
   transition: all 0.3s ease;
   z-index: 2;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
 article > section:nth-of-type(1) p:first-of-type a:hover {
   background-color: #ffffff;
   transform: translateX(-50%) scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
+/* Hero Images */
 article > section:nth-of-type(1) p:first-of-type img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  position: relative; /* Changed from absolute to respect grid */
+  position: relative;
   z-index: -1;
 }
 
+/* Content Section */
 article > section:nth-of-type(1) p:nth-of-type(2) {
   display: grid;
-  grid-template-columns: 1fr; /* Single column on mobile */
-  gap: clamp(0.5rem, 1vw, 1rem);
-  padding: clamp(0.5rem, 2vw, 1rem);
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: clamp(1rem, 3vw, 2rem);
   position: relative;
   z-index: 1;
 }
@@ -134,78 +142,97 @@ article > section:nth-of-type(1) p:nth-of-type(2) {
 article > section:nth-of-type(1) p:nth-of-type(2) img {
   width: 100%;
   height: auto;
-  margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
   display: block;
   position: relative;
   z-index: 1;
 }
 
-/* Media Queries */
+/* Mobile (< 767px) */
 @media screen and (max-width: 767px) {
   article > section:nth-of-type(1) p:first-of-type {
-    grid-template-columns: 1fr; /* Stack images on mobile */
+    grid-template-columns: 1fr;
+    height: 50vh;
+    min-height: 400px;
   }
 
   article > section:nth-of-type(1) p:first-of-type > img:nth-child(2)::after {
-    display: none; /* Hide vertical line on mobile */
+    display: none;
   }
 
-  article > section:nth-of-type(1) p:nth-of-type(2) {
-    grid-template-columns: 1fr; /* Force single column on mobile */
-    padding: clamp(0.5rem, 2vw, 1rem);
+  article > section:nth-of-type(1) p:first-of-type::before {
+    bottom: clamp(32%, 16vw, 42%);
+    font-size: clamp(0.875rem, 2.5vw, 1.25rem);
   }
 
-  article > section:nth-of-type(1) p:nth-of-type(2) img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  article > section:nth-of-type(1) p:first-of-type::after {
+    bottom: clamp(20%, 12vw, 32%);
+    font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+  }
+
+  article > section:nth-of-type(1) p:first-of-type a {
+    bottom: clamp(10%, 8vw, 18%);
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 2.5vw, 2rem);
+    font-size: clamp(0.875rem, 2vw, 1rem);
   }
 }
 
+/* Small Mobile (< 480px) */
+@media screen and (max-width: 480px) {
+  article > section:nth-of-type(1) p:first-of-type::before {
+    bottom: clamp(35%, 18vw, 45%);
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+  }
+
+  article > section:nth-of-type(1) p:first-of-type::after {
+    bottom: clamp(22%, 14vw, 35%);
+    font-size: clamp(1.25rem, 4.5vw, 2rem);
+  }
+
+  article > section:nth-of-type(1) p:first-of-type a {
+    bottom: clamp(12%, 10vw, 20%);
+    padding: clamp(0.625rem, 2vw, 0.875rem) clamp(1.25rem, 2.5vw, 1.75rem);
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+  }
+}
+
+/* Tablet (768px+) */
 @media screen and (min-width: 768px) {
   article > section:nth-of-type(1) p:first-of-type {
-    grid-template-columns: 1fr 1fr; /* Side-by-side images */
-    height: 60vh;
-    min-height: 500px;
-  }
-
-  article > section:nth-of-type(1) p:nth-of-type(2) {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on tablet+ */
-  }
-
-  article > section:nth-of-type(1) p:nth-of-type(2) img {
-    margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  article > section:nth-of-type(1) p:first-of-type {
     grid-template-columns: 1fr 1fr;
-    height: 80vh;
-    min-height: 600px;
+    height: 70vh;
+    min-height: 550px;
   }
 
   article > section:nth-of-type(1) p:nth-of-type(2) {
     grid-template-columns: repeat(2, 1fr);
-    padding: clamp(1rem, 2vw, 2rem);
-  }
-
-  article > section:nth-of-type(1) p:nth-of-type(2) img {
-    margin-bottom: 0; /* Side-by-side on desktop */
   }
 }
 
+/* Desktop (1024px+) */
+@media screen and (min-width: 1024px) {
+  article > section:nth-of-type(1) p:first-of-type {
+    height: 85vh;
+    min-height: 650px;
+  }
+
+  article > section:nth-of-type(1) p:nth-of-type(2) {
+    padding: clamp(1.5rem, 3vw, 3rem);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Large Desktop (1440px+) */
 @media screen and (min-width: 1440px) {
   article > section:nth-of-type(1) p:first-of-type {
     height: 100vh;
-    min-height: 700px;
+    min-height: 800px;
   }
 
   article > section:nth-of-type(1) p:nth-of-type(2) {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: none;
+    max-width: none; /* Preserved */
     margin: 0 auto;
-    padding: clamp(1.5rem, 2vw, 2.5rem);
+    padding: clamp(2rem, 3vw, 4rem);
   }
 }

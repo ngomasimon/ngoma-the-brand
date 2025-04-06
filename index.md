@@ -2,9 +2,9 @@
 include: [ index, motion ]
 ---
 
-[Get Started](#)
-![Image 1](https://picsum.photos/seed/1/1200/800)
-![Image 2](https://picsum.photos/seed/2/1200/800)
+[Explore My Services](#)
+![Image 2](/img/left.jpeg)
+![Image 2](/img/right-image.png)
 
 ![Image 3](https://picsum.photos/seed/3/600/400)
 ![Image 4](https://picsum.photos/seed/4/600/400)
