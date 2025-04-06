@@ -1,15 +1,13 @@
 ---
 title: Ngoma the brand
-include: [ index, motion ]
+include: [index, motion ]
+content_collection: services
 ---
 
 [Explore My Services](/all-services/)
 ![Image 2](/img/all.jpeg)
 ![Image 2](/img/right-image.png)
 
-![Image 3](https://picsum.photos/seed/3/600/400)
-![Image 4](https://picsum.photos/seed/4/600/400)
-![Image 5](https://picsum.photos/seed/5/600/400)
-![Image 6](https://picsum.photos/seed/6/600/400)
-![Image 7](https://picsum.photos/seed/7/600/400)
-![Image 8](https://picsum.photos/seed/8/600/400)
+[page-list.gallery]
+
+

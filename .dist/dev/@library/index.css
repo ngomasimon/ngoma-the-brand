@@ -138,6 +138,84 @@ article > section:first-of-type p:nth-of-type(2) img {
   position: relative;
 }
 
+article > section:first-of-type .gallery {
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(243, 244, 243, .9), rgba(255, 255, 255, .95));
+  border-radius: 12px;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 2vw, 2rem);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  display: grid;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .05);
+}
+
+article > section:first-of-type .gallery li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+article > section:first-of-type .gallery a {
+  color: inherit;
+  text-decoration: none;
+  transition: transform .3s, box-shadow .3s;
+  display: block;
+}
+
+article > section:first-of-type .gallery figure {
+  background: #fff;
+  border-radius: 8px;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+article > section:first-of-type .gallery img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  transition: transform .4s;
+  display: block;
+}
+
+article > section:first-of-type .gallery figcaption {
+  z-index: 2;
+  background: rgba(255, 255, 255, .9);
+  flex-grow: 1;
+  padding: clamp(.75rem, 1vw, 1rem);
+  position: relative;
+}
+
+article > section:first-of-type .gallery time, article > section:first-of-type .gallery p {
+  display: none;
+}
+
+article > section:first-of-type .gallery h2 {
+  color: #222;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+  text-align: center;
+  margin: 0;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+article > section:first-of-type .gallery a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
+}
+
+article > section:first-of-type .gallery a:hover img {
+  transform: scale(1.05);
+}
+
 @media screen and (width <= 767px) {
   article > section:first-of-type p:first-of-type {
     grid-template-columns: 1fr;
@@ -163,6 +241,11 @@ article > section:first-of-type p:nth-of-type(2) img {
     padding: clamp(.75rem, 2vw, 1rem) clamp(1.5rem, 2.5vw, 2rem);
     font-size: clamp(.875rem, 2vw, 1rem);
     bottom: clamp(10%, 8vw, 18%);
+  }
+
+  article > section:first-of-type .gallery {
+    grid-template-columns: 1fr;
+    padding: clamp(.75rem, 2vw, 1.5rem);
   }
 }
 
@@ -191,7 +274,7 @@ article > section:first-of-type p:nth-of-type(2) img {
     min-height: 550px;
   }
 
-  article > section:first-of-type p:nth-of-type(2) {
+  article > section:first-of-type p:nth-of-type(2), article > section:first-of-type .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -212,6 +295,11 @@ article > section:first-of-type p:nth-of-type(2) img {
     padding: clamp(.5rem, 1vw, .75rem) clamp(1rem, 1.5vw, 1.5rem);
     font-size: clamp(.875rem, 1.5vw, 1rem);
   }
+
+  article > section:first-of-type .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+  }
 }
 
 @media screen and (width >= 1440px) {
@@ -229,5 +317,11 @@ article > section:first-of-type p:nth-of-type(2) img {
   article > section:first-of-type p:first-of-type a {
     padding: clamp(.375rem, .8vw, .625rem) clamp(.875rem, 1.2vw, 1.25rem);
     font-size: clamp(.75rem, 1.2vw, .875rem);
+  }
+
+  article > section:first-of-type .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+    padding: clamp(2rem, 3vw, 4rem);
   }
 }

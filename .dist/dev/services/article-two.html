@@ -4,17 +4,18 @@
 
   <head>
     <meta charset="utf-8">
-<title>Ngoma The Brand / Ngoma the brand</title>
+<title>Ngoma The Brand / Digital Marketing That Connects and Converts</title>
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-06T15:31:20.744Z">
+<meta name="date.updated" content="2025-04-06T15:21:54.499Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="[Explore My Services](/all-services/)">
+<meta name="description" content="I offer a full-spectrum digital marketing service built to drive measurable results through clean design, clear messaging, and conversion-focused execution.">
 <meta name="author" content="Simon Ngoma">
-<meta property="og:title" content="Ngoma the brand">
-<meta property="og:description" content="[Explore My Services](/all-services/)">
+<meta property="og:title" content="Digital Marketing That Connects and Converts">
+<meta property="og:description" content="I offer a full-spectrum digital marketing service built to drive measurable results through clean design, clear messaging, and conversion-focused execution.">
 <meta property="og:image" content="https://simple-blog.nuejs.org/img/og_emma.png">
+<meta property="article:published_time" content="Sat Nov 23 2024 03:00:00 GMT+0300 (East Africa Time)">
 <meta name="nue:components" content=" ">
-<meta name="nue:include" content="index motion">
+<meta name="nue:include" content="content cards motion">
 <meta name="nue:globals" content="@global">
 <meta name="nue:libs" content="@library">
 <link rel="icon" type="image/jpg" href="/img/favicon.jpg">
@@ -390,331 +391,89 @@ p, li {
   }
 }
 </style>
-<style href="/@library/index.css">body {
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  line-height: 1.8;
+<style href="/@library/cards.css">:root {
+  --pink-gradient: linear-gradient(#e879f9, #ec4899);
+  --blue-gradient: linear-gradient(#0ea5e9, #67e8f9);
 }
 
-body > header {
-  z-index: 2;
-  padding: clamp(1.5rem, 3vw, 3rem) clamp(2.5rem, 5vw, 5rem);
-  position: relative;
-}
-
-article {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
+.pink, .blue {
+  background-image: var(--pink-gradient);
+  border-radius: .8em;
+  margin: 1.5em 0 2em;
+  padding: 3em 0 0 3em;
   overflow: hidden;
+
+  & pre {
+    margin: 0;
+    padding: 2em;
+  }
+
+  & > * {
+    border-radius: .6em 0 0;
+  }
 }
 
-article > section:first-of-type {
-  background-color: #f3f4f3;
-  width: 100%;
-  max-width: none;
-  position: relative;
+.blue {
+  background-image: var(--blue-gradient);
+}
+</style>
+<style href="/@library/content.css">article a {
+  text-decoration: underline var(--main-500) 1px;
+  text-underline-offset: 3px;
+  color: var(--gray-800);
+  font-weight: 500;
+
+  &:hover {
+    text-decoration-color: var(--main-600);
+    color: #000;
+    text-decoration-thickness: 2px;
+  }
 }
 
-article > section:first-of-type p:first-of-type {
-  color: rgba(0, 0, 0, 0);
-  z-index: 1;
-  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .8));
-  grid-template-columns: 1fr 1fr;
-  height: 60vh;
-  min-height: 450px;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  position: relative;
-  overflow: hidden;
+h2 {
+  color: var(--gray-900);
+  margin: 4em 0 0;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-article > section:first-of-type p:first-of-type:before {
-  content: "I Make It Work";
-  text-align: center;
-  color: #fff;
-  z-index: 2;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, .5);
-  background: rgba(0, 0, 0, .5);
-  border-radius: 4px;
-  padding: .5rem 1rem;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  font-weight: 600;
-  position: absolute;
-  bottom: clamp(30%, 16vw, 42%);
-  left: 50%;
-  transform: translateX(-50%);
+li {
+  text-wrap: balance;
+  margin-bottom: 1em;
 }
 
-article > section:first-of-type p:first-of-type:after {
-  content: "NGOMA THE BRAND";
-  text-align: center;
-  color: #fff;
-  z-index: 2;
-  letter-spacing: -.2px;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, .4);
-  font-size: clamp(2rem, 4.5vw, 3rem);
-  font-weight: 700;
-  position: absolute;
-  bottom: clamp(18%, 10vw, 30%);
-  left: 50%;
-  transform: translateX(-50%);
+pre {
+  --glow-padding: 2em;
+  font-size: 105%;
 }
 
-article > section:first-of-type p:first-of-type > img:nth-child(2):after {
-  content: "";
-  z-index: 0;
-  background-color: rgba(255, 255, 255, .2);
-  width: 2px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-article > section:first-of-type p:first-of-type a {
-  color: #222;
-  letter-spacing: .8px;
-  z-index: 2;
-  background-color: rgba(255, 255, 255, .95);
+img, pre {
   border-radius: 8px;
-  padding: clamp(.625rem, 1.5vw, 1rem) clamp(1.25rem, 2vw, 2rem);
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all .3s;
-  display: inline-block;
-  position: absolute;
-  bottom: clamp(8%, 6vw, 15%);
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, .15);
 }
 
-article > section:first-of-type p:first-of-type a:hover {
-  background-color: #fff;
-  transform: translateX(-50%)scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, .2);
-}
-
-article > section:first-of-type p:first-of-type img {
-  object-fit: cover;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: relative;
-}
-
-article > section:first-of-type p:nth-of-type(2) {
-  z-index: 1;
-  grid-template-columns: 1fr;
-  gap: clamp(1rem, 2vw, 2rem);
-  padding: clamp(1rem, 3vw, 2rem);
-  display: grid;
-  position: relative;
-}
-
-article > section:first-of-type p:nth-of-type(2) img {
-  z-index: 1;
-  width: 100%;
-  height: auto;
-  margin-bottom: clamp(1rem, 2vw, 1.5rem);
-  display: block;
-  position: relative;
-}
-
-article > section:first-of-type .gallery {
-  z-index: 1;
-  background: linear-gradient(135deg, rgba(243, 244, 243, .9), rgba(255, 255, 255, .95));
-  border-radius: 12px;
-  grid-template-columns: 1fr;
-  gap: clamp(1rem, 2vw, 2rem);
+img {
   max-width: 100%;
-  margin: 0 auto;
-  padding: clamp(1rem, 3vw, 2rem);
-  display: grid;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, .05);
-}
-
-article > section:first-of-type .gallery li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-article > section:first-of-type .gallery a {
-  color: inherit;
-  text-decoration: none;
-  transition: transform .3s, box-shadow .3s;
-  display: block;
-}
-
-article > section:first-of-type .gallery figure {
-  background: #fff;
-  border-radius: 8px;
-  flex-direction: column;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-}
-
-article > section:first-of-type .gallery img {
-  object-fit: cover;
-  width: 100%;
   height: auto;
-  transition: transform .4s;
-  display: block;
 }
 
-article > section:first-of-type .gallery figcaption {
-  z-index: 2;
-  background: rgba(255, 255, 255, .9);
-  flex-grow: 1;
-  padding: clamp(.75rem, 1vw, 1rem);
-  position: relative;
-}
+blockquote {
+  border-left: 5px solid var(--gray-900);
+  text-wrap: balance;
+  margin: 2.5em 0;
+  padding-left: 1.5em;
 
-article > section:first-of-type .gallery time, article > section:first-of-type .gallery p {
-  display: none;
-}
-
-article > section:first-of-type .gallery h2 {
-  color: #222;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-  text-align: center;
-  margin: 0;
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-article > section:first-of-type .gallery a:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
-}
-
-article > section:first-of-type .gallery a:hover img {
-  transform: scale(1.05);
-}
-
-@media screen and (width <= 767px) {
-  article > section:first-of-type p:first-of-type {
-    grid-template-columns: 1fr;
-    height: 50vh;
-    min-height: 400px;
+  & p {
+    color: var(--gray-900);
+    font-size: 140%;
+    font-weight: 600;
+    line-height: 1.5;
   }
 
-  article > section:first-of-type p:first-of-type > img:nth-child(2):after {
-    display: none;
-  }
-
-  article > section:first-of-type p:first-of-type:before {
-    font-size: clamp(.875rem, 2.5vw, 1.25rem);
-    bottom: clamp(32%, 16vw, 42%);
-  }
-
-  article > section:first-of-type p:first-of-type:after {
-    font-size: clamp(1.5rem, 4.5vw, 2.5rem);
-    bottom: clamp(20%, 12vw, 32%);
-  }
-
-  article > section:first-of-type p:first-of-type a {
-    padding: clamp(.75rem, 2vw, 1rem) clamp(1.5rem, 2.5vw, 2rem);
-    font-size: clamp(.875rem, 2vw, 1rem);
-    bottom: clamp(10%, 8vw, 18%);
-  }
-
-  article > section:first-of-type .gallery {
-    grid-template-columns: 1fr;
-    padding: clamp(.75rem, 2vw, 1.5rem);
-  }
-}
-
-@media screen and (width <= 480px) {
-  article > section:first-of-type p:first-of-type:before {
-    font-size: clamp(.75rem, 2.5vw, 1rem);
-    bottom: clamp(35%, 18vw, 45%);
-  }
-
-  article > section:first-of-type p:first-of-type:after {
-    font-size: clamp(1.25rem, 4.5vw, 2rem);
-    bottom: clamp(22%, 14vw, 35%);
-  }
-
-  article > section:first-of-type p:first-of-type a {
-    padding: clamp(.625rem, 2vw, .875rem) clamp(1.25rem, 2.5vw, 1.75rem);
-    font-size: clamp(.75rem, 2vw, .875rem);
-    bottom: clamp(12%, 10vw, 20%);
-  }
-}
-
-@media screen and (width >= 768px) {
-  article > section:first-of-type p:first-of-type {
-    grid-template-columns: 1fr 1fr;
-    height: 70vh;
-    min-height: 550px;
-  }
-
-  article > section:first-of-type p:nth-of-type(2), article > section:first-of-type .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (width >= 1024px) {
-  article > section:first-of-type p:first-of-type {
-    height: 85vh;
-    min-height: 650px;
-  }
-
-  article > section:first-of-type p:nth-of-type(2) {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: clamp(1.5rem, 3vw, 3rem);
-  }
-
-  article > section:first-of-type p:first-of-type a {
-    padding: clamp(.5rem, 1vw, .75rem) clamp(1rem, 1.5vw, 1.5rem);
-    font-size: clamp(.875rem, 1.5vw, 1rem);
-  }
-
-  article > section:first-of-type .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 1200px;
-  }
-}
-
-@media screen and (width >= 1440px) {
-  article > section:first-of-type p:first-of-type {
-    height: 100vh;
-    min-height: 800px;
-  }
-
-  article > section:first-of-type p:nth-of-type(2) {
-    max-width: none;
-    margin: 0 auto;
-    padding: clamp(2rem, 3vw, 4rem);
-  }
-
-  article > section:first-of-type p:first-of-type a {
-    padding: clamp(.375rem, .8vw, .625rem) clamp(.875rem, 1.2vw, 1.25rem);
-    font-size: clamp(.75rem, 1.2vw, .875rem);
-  }
-
-  article > section:first-of-type .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: none;
-    padding: clamp(2rem, 3vw, 4rem);
+  & strong {
+    background-color: var(--marker);
+    font-weight: inherit;
+    margin-inline: -.2em;
+    padding: .1em .2em;
   }
 }
 </style>
@@ -788,10 +547,58 @@ article {
     
 
     <article>
-      
-      <section><p><a href="/all-services/">Explore My Services</a> <img src="/img/all.jpeg" alt="Image 2" loading="lazy"> <img src="/img/right-image.png" alt="Image 2" loading="lazy"></p>
-<ul class="gallery"><li><a href="/services/article-two.html"><figure><img src="/services/img/colors-2.jpg" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>Digital Marketing That Connects and Converts</h2><p>I offer a full-spectrum digital marketing service built to drive measurable results through clean design, clear messaging, and conversion-focused execution.</p></figcaption></figure></a></li>
-<li><a href="/services/digital-marketing.html"><figure><img src="/services/img/colors-2.jpg" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>Digital Marketing That Connects and Converts</h2><p>I offer a full-spectrum digital marketing service built to drive measurable results through clean design, clear messaging, and conversion-focused execution.</p></figcaption></figure></a></li></ul></section>
+      <header>
+  <h1>Digital Marketing That Connects and Converts</h1>
+  <img width="1000" height="800" src="img/colors-2.jpg" alt="Hero image for Digital Marketing That Connects and Converts">
+</header>
+      <section><h2>Summary</h2>
+<p>I offer a full-spectrum digital marketing service built to drive measurable results through clean design, clear messaging, and conversion-focused execution.</p></section>
+
+<section><h2>What&#x2019;s Included</h2>
+<ul><li><p>Social media strategy and content creation</p></li>
+<li><p>Email marketing campaigns</p></li>
+<li><p>SEO and blog content optimization</p></li>
+<li><p>Paid ads (Google, Meta, LinkedIn)</p></li>
+<li><p>Website and landing page funnel design</p></li>
+<li><p>Analytics and performance reporting</p></li></ul></section>
+
+<section><h2>Who It&#x2019;s For</h2>
+<ul><li><p>Founders launching new products</p></li>
+<li><p>Small businesses scaling digital reach</p></li>
+<li><p>Agencies needing execution support</p></li>
+<li><p>Creators looking to grow their audience</p></li></ul></section>
+
+<section><h2>Why It Matters</h2>
+<p>Most brands struggle to convert traffic into action. I create marketing systems that align every touchpoint&#x2014;so your message connects, your audience responds, and your business grows.</p></section>
+
+<section><h2>How It Works</h2>
+<ol><li><p><strong>Free Discovery Call</strong> &#x2013; We align on goals and timelines</p></li>
+<li><p><strong>Strategy Blueprint</strong> &#x2013; I map the digital touchpoints and conversion paths</p></li>
+<li><p><strong>Execution</strong> &#x2013; I build and launch campaigns, content, and ads</p></li>
+<li><p><strong>Review &amp; Optimize</strong> &#x2013; Monthly reports and refinement</p></li></ol></section>
+
+<section><h2>Pricing</h2>
+<p>Starting at <strong>&#x24;2,500/month</strong>, depending on scope and channels. <a href="mailto:you@example.com">Contact me</a> for a custom quote.</p></section>
+
+<section><h2>Portfolio</h2>
+<ul><li><p><a href="#">E-commerce Email Campaign &#x2013; 35% revenue lift</a></p></li>
+<li><p><a href="#">SaaS Lead Funnel &#x2013; 4.8x ROAS</a></p></li>
+<li><p><a href="#">Brand Relaunch &#x2013; +60% organic traffic</a></p></li></ul></section>
+
+<section><h2>What Clients Say</h2>
+<blockquote><p>&#x201c;Our traffic doubled in 3 months, but more importantly&#x2014;we converted that into paying customers. This service paid for itself fast.&#x201d; &#x2014; <strong>Anna, Founder at Clarity Health</strong></p></blockquote>
+
+<blockquote><p>&#x201c;It felt like having an in-house marketing team, without the overhead.&#x201d; &#x2014; <strong>David, Agency Owner</strong></p></blockquote>
+</section>
+
+<section><h2>FAQ</h2>
+<p><strong>Do you work with ongoing retainer clients?</strong> Yes, most projects are month-to-month with a 3-month minimum.</p>
+<p><strong>Do you run the ads directly?</strong> Yes, I handle setup, copy, creatives, targeting, and optimization.</p>
+<p><strong>Can you work with my existing team?</strong> Absolutely&#x2014;I&apos;ve partnered with devs, designers, and in-house marketers.</p></section>
+
+<section><h2>Let&#x2019;s Work Together</h2>
+<p>Ready to turn clicks into customers?</p>
+<p><a href="mailto:you@example.com">Book a Free Call</a> or <a href="mailto:you@example.com">Send a Message</a></p></section>
       
     </article>
 
