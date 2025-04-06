@@ -2,6 +2,9 @@
 include: [ index, motion ]
 ---
 
+Welcome to the Gallery
+Explore a curated selection of beautiful images. Scroll down to see more.
+[Get Started](#)
 ![Image 1](https://picsum.photos/seed/1/1200/800)
 ![Image 2](https://picsum.photos/seed/2/1200/800)
 
