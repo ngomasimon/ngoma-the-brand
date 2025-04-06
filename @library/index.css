@@ -50,7 +50,7 @@ article > section:nth-of-type(1) p:first-of-type {
 
 /* Welcome Text */
 article > section:nth-of-type(1) p:first-of-type::before {
-  content: "Welcome to my Portfolio";
+  content: "I Make It Work";
   position: absolute;
   bottom: clamp(30%, 16vw, 42%); /* Slightly higher position */
   left: 50%;

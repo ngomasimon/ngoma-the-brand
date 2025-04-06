@@ -41,7 +41,7 @@ article > section:first-of-type p:first-of-type {
 }
 
 article > section:first-of-type p:first-of-type:before {
-  content: "Welcome to my Portfolio";
+  content: "I Make It Work";
   text-align: center;
   color: #fff;
   z-index: 2;

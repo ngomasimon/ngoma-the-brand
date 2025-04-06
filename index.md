@@ -1,9 +1,10 @@
 ---
+title: Ngoma the brand
 include: [ index, motion ]
 ---
 
 [Explore My Services](#)
-![Image 2](/img/left.jpeg)
+![Image 2](/img/all.jpeg)
 ![Image 2](/img/right-image.png)
 
 ![Image 3](https://picsum.photos/seed/3/600/400)
