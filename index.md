@@ -3,7 +3,7 @@ title: Ngoma the brand
 include: [ index, motion ]
 ---
 
-[Explore My Services](#)
+[Explore My Services](/all-services/)
 ![Image 2](/img/all.jpeg)
 ![Image 2](/img/right-image.png)
 
