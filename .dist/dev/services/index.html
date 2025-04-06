@@ -4,17 +4,13 @@
 
   <head>
     <meta charset="utf-8">
-<title>Ngoma The Brand / Ngoma the brand</title>
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-06T12:53:09.221Z">
+<meta name="date.updated" content="2025-04-06T12:49:12.949Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="[Explore My Services](#)">
 <meta name="author" content="Simon Ngoma">
-<meta property="og:title" content="Ngoma the brand">
-<meta property="og:description" content="[Explore My Services](#)">
 <meta property="og:image" content="https://simple-blog.nuejs.org/img/og_emma.png">
 <meta name="nue:components" content=" ">
-<meta name="nue:include" content="index motion">
+<meta name="nue:include" content="content cards motion gallery">
 <meta name="nue:globals" content="@global">
 <meta name="nue:libs" content="@library">
 <link rel="icon" type="image/jpg" href="/img/favicon.jpg">
@@ -390,237 +386,174 @@ p, li {
   }
 }
 </style>
-<style href="/@library/index.css">body {
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  line-height: 1.8;
+<style href="/@library/cards.css">:root {
+  --pink-gradient: linear-gradient(#e879f9, #ec4899);
+  --blue-gradient: linear-gradient(#0ea5e9, #67e8f9);
 }
 
-body > header {
-  z-index: 2;
-  padding: clamp(1.5rem, 3vw, 3rem) clamp(2.5rem, 5vw, 5rem);
-  position: relative;
-}
-
-article {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
+.pink, .blue {
+  background-image: var(--pink-gradient);
+  border-radius: .8em;
+  margin: 1.5em 0 2em;
+  padding: 3em 0 0 3em;
   overflow: hidden;
+
+  & pre {
+    margin: 0;
+    padding: 2em;
+  }
+
+  & > * {
+    border-radius: .6em 0 0;
+  }
 }
 
-article > section:first-of-type {
-  background-color: #f3f4f3;
-  width: 100%;
-  max-width: none;
-  position: relative;
+.blue {
+  background-image: var(--blue-gradient);
+}
+</style>
+<style href="/@library/content.css">article a {
+  text-decoration: underline var(--main-500) 1px;
+  text-underline-offset: 3px;
+  color: var(--gray-800);
+  font-weight: 500;
+
+  &:hover {
+    text-decoration-color: var(--main-600);
+    color: #000;
+    text-decoration-thickness: 2px;
+  }
 }
 
-article > section:first-of-type p:first-of-type {
-  color: rgba(0, 0, 0, 0);
-  z-index: 1;
-  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .8));
-  grid-template-columns: 1fr 1fr;
-  height: 60vh;
-  min-height: 450px;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  position: relative;
-  overflow: hidden;
+h2 {
+  color: var(--gray-900);
+  margin: 4em 0 0;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-article > section:first-of-type p:first-of-type:before {
-  content: "I Make It Work";
-  text-align: center;
-  color: #fff;
-  z-index: 2;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, .5);
-  background: rgba(0, 0, 0, .5);
-  border-radius: 4px;
-  padding: .5rem 1rem;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  font-weight: 600;
-  position: absolute;
-  bottom: clamp(30%, 16vw, 42%);
-  left: 50%;
-  transform: translateX(-50%);
+li {
+  text-wrap: balance;
+  margin-bottom: 1em;
 }
 
-article > section:first-of-type p:first-of-type:after {
-  content: "NGOMA THE BRAND";
-  text-align: center;
-  color: #fff;
-  z-index: 2;
-  letter-spacing: -.2px;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, .4);
-  font-size: clamp(2rem, 4.5vw, 3rem);
-  font-weight: 700;
-  position: absolute;
-  bottom: clamp(18%, 10vw, 30%);
-  left: 50%;
-  transform: translateX(-50%);
+pre {
+  --glow-padding: 2em;
+  font-size: 105%;
 }
 
-article > section:first-of-type p:first-of-type > img:nth-child(2):after {
-  content: "";
-  z-index: 0;
-  background-color: rgba(255, 255, 255, .2);
-  width: 2px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-article > section:first-of-type p:first-of-type a {
-  color: #222;
-  letter-spacing: .8px;
-  z-index: 2;
-  background-color: rgba(255, 255, 255, .95);
+img, pre {
   border-radius: 8px;
-  padding: clamp(.625rem, 1.5vw, 1rem) clamp(1.25rem, 2vw, 2rem);
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all .3s;
-  display: inline-block;
-  position: absolute;
-  bottom: clamp(8%, 6vw, 15%);
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, .15);
 }
 
-article > section:first-of-type p:first-of-type a:hover {
-  background-color: #fff;
-  transform: translateX(-50%)scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, .2);
-}
-
-article > section:first-of-type p:first-of-type img {
-  object-fit: cover;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: relative;
-}
-
-article > section:first-of-type p:nth-of-type(2) {
-  z-index: 1;
-  grid-template-columns: 1fr;
-  gap: clamp(1rem, 2vw, 2rem);
-  padding: clamp(1rem, 3vw, 2rem);
-  display: grid;
-  position: relative;
-}
-
-article > section:first-of-type p:nth-of-type(2) img {
-  z-index: 1;
-  width: 100%;
+img {
+  max-width: 100%;
   height: auto;
-  margin-bottom: clamp(1rem, 2vw, 1.5rem);
-  display: block;
-  position: relative;
 }
 
-@media screen and (width <= 767px) {
-  article > section:first-of-type p:first-of-type {
-    grid-template-columns: 1fr;
-    height: 50vh;
-    min-height: 400px;
+blockquote {
+  border-left: 5px solid var(--gray-900);
+  text-wrap: balance;
+  margin: 2.5em 0;
+  padding-left: 1.5em;
+
+  & p {
+    color: var(--gray-900);
+    font-size: 140%;
+    font-weight: 600;
+    line-height: 1.5;
   }
 
-  article > section:first-of-type p:first-of-type > img:nth-child(2):after {
-    display: none;
-  }
-
-  article > section:first-of-type p:first-of-type:before {
-    font-size: clamp(.875rem, 2.5vw, 1.25rem);
-    bottom: clamp(32%, 16vw, 42%);
-  }
-
-  article > section:first-of-type p:first-of-type:after {
-    font-size: clamp(1.5rem, 4.5vw, 2.5rem);
-    bottom: clamp(20%, 12vw, 32%);
-  }
-
-  article > section:first-of-type p:first-of-type a {
-    padding: clamp(.75rem, 2vw, 1rem) clamp(1.5rem, 2.5vw, 2rem);
-    font-size: clamp(.875rem, 2vw, 1rem);
-    bottom: clamp(10%, 8vw, 18%);
+  & strong {
+    background-color: var(--marker);
+    font-weight: inherit;
+    margin-inline: -.2em;
+    padding: .1em .2em;
   }
 }
+</style>
+<style href="/@library/gallery.css">.gallery {
+  margin-block: 2rem;
+  margin-inline: auto;
+  padding: 0;
+  list-style: none;
 
-@media screen and (width <= 480px) {
-  article > section:first-of-type p:first-of-type:before {
-    font-size: clamp(.75rem, 2.5vw, 1rem);
-    bottom: clamp(35%, 18vw, 45%);
+  & li {
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
   }
 
-  article > section:first-of-type p:first-of-type:after {
-    font-size: clamp(1.25rem, 4.5vw, 2rem);
-    bottom: clamp(22%, 14vw, 35%);
+  & a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
   }
 
-  article > section:first-of-type p:first-of-type a {
-    padding: clamp(.625rem, 2vw, .875rem) clamp(1.25rem, 2.5vw, 1.75rem);
-    font-size: clamp(.75rem, 2vw, .875rem);
-    bottom: clamp(12%, 10vw, 20%);
-  }
-}
+  & figure {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    transition: transform .15s;
+    display: flex;
 
-@media screen and (width >= 768px) {
-  article > section:first-of-type p:first-of-type {
-    grid-template-columns: 1fr 1fr;
-    height: 70vh;
-    min-height: 550px;
-  }
+    @media (width >= 600px) {
+      & {
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: 1.5rem;
+      }
+    }
 
-  article > section:first-of-type p:nth-of-type(2) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (width >= 1024px) {
-  article > section:first-of-type p:first-of-type {
-    height: 85vh;
-    min-height: 650px;
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
 
-  article > section:first-of-type p:nth-of-type(2) {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: clamp(1.5rem, 3vw, 3rem);
+  & time {
+    color: var(--gray-500);
+    margin-bottom: .5rem;
+    font-size: .85rem;
+    font-weight: 300;
+    display: block;
   }
 
-  article > section:first-of-type p:first-of-type a {
-    padding: clamp(.5rem, 1vw, .75rem) clamp(1rem, 1.5vw, 1.5rem);
-    font-size: clamp(.875rem, 1.5vw, 1rem);
-  }
-}
-
-@media screen and (width >= 1440px) {
-  article > section:first-of-type p:first-of-type {
-    height: 100vh;
-    min-height: 800px;
+  & h2 {
+    color: var(--gray-800);
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
   }
 
-  article > section:first-of-type p:nth-of-type(2) {
-    max-width: none;
-    margin: 0 auto;
-    padding: clamp(2rem, 3vw, 4rem);
+  & p {
+    color: var(--gray-600);
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    margin-block: .5rem 0;
+    font-size: .95rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    overflow: hidden;
   }
 
-  article > section:first-of-type p:first-of-type a {
-    padding: clamp(.375rem, .8vw, .625rem) clamp(.875rem, 1.2vw, 1.25rem);
-    font-size: clamp(.75rem, 1.2vw, .875rem);
+  & img {
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+
+    @media (width >= 600px) {
+      & {
+        width: 120px;
+        height: 120px;
+      }
+    }
   }
 }
 </style>
@@ -671,7 +604,8 @@ article {
     Simon Ngoma
   </a>
   <nav><a href="/about/">About</a>
-<a href="/all-services/">Services</a>
+<a href="/services/">Services</a>
+<a href="/projects/">Projects</a>
 <a href="/all-blogs">Blog</a>
 <a href="/contact/">Contact</a></nav>
   <button popovertarget="menu" aria-label="Toggle menu">
@@ -684,7 +618,8 @@ article {
     </svg>
   </button>
   <nav><a href="/about/">About</a>
-<a href="/all-services/">Services</a>
+<a href="/services/">Services</a>
+<a href="/projects/">Projects</a>
 <a href="/all-blogs">Blog</a>
 <a href="/contact/">Contact</a></nav>
 </dialog>
@@ -694,9 +629,12 @@ article {
     
 
     <article>
-      
-      <section><p><a href="#">Explore My Services</a> <img src="/img/all.jpeg" alt="Image 2" loading="lazy"> <img src="/img/right-image.png" alt="Image 2" loading="lazy"></p>
-<p><img src="https://picsum.photos/seed/3/600/400" alt="Image 3" loading="lazy"> <img src="https://picsum.photos/seed/4/600/400" alt="Image 4" loading="lazy"> <img src="https://picsum.photos/seed/5/600/400" alt="Image 5" loading="lazy"> <img src="https://picsum.photos/seed/6/600/400" alt="Image 6" loading="lazy"> <img src="https://picsum.photos/seed/7/600/400" alt="Image 7" loading="lazy"> <img src="https://picsum.photos/seed/8/600/400" alt="Image 8" loading="lazy"></p></section>
+      <header>
+  <h1></h1>
+  <img width="1000" height="800" src="/img/og.jpg" alt="Hero image for">
+</header>
+      <section><ul class="gallery"><li class="is-new"><time datetime="2025-04-06T12:49:12.947Z">April 6, 2025</time><a href="/services/"></a></li>
+<li><a href="/services/digital-marketing.html"><figure><img src="/services/img/colors-2.jpg" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>Digital Marketing That Connects and Converts</h2><p>I offer a full-spectrum digital marketing service built to drive measurable results through clean design, clear messaging, and conversion-focused execution.</p></figcaption></figure></a></li></ul></section>
       
     </article>
 

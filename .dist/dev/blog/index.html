@@ -4,17 +4,14 @@
 
   <head>
     <meta charset="utf-8">
-<title>Emma Bennet / Minimalist, UX developer, designer, urban explorer</title>
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-05T15:44:19.777Z">
+<meta name="date.updated" content="2025-04-06T12:26:45.984Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="I&apos;m Emma Bennett, a design engineer from Berlin. I build websites that are exceptionally well-designed &#x2014; inside, and outside.">
-<meta name="author" content="Emma Bennet">
-<meta property="og:title" content="Minimalist, UX developer, designer, urban explorer">
-<meta property="og:description" content="I&apos;m Emma Bennett, a design engineer from Berlin. I build websites that are exceptionally well-designed &#x2014; inside, and outside.">
+<meta name="author" content="Simon Ngoma">
 <meta property="og:image" content="https://simple-blog.nuejs.org/img/og_emma.png">
 <meta name="nue:components" content=" ">
 <meta name="nue:include" content="content cards motion gallery">
+<meta name="nue:exclude" content="layout">
 <meta name="nue:globals" content="@global">
 <meta name="nue:libs" content="@library">
 <link rel="icon" type="image/jpg" href="/img/favicon.jpg">
@@ -28,245 +25,6 @@
   --main-500: #3b82f6;
   --main-600: #2563eb;
   --marker: #ffff7a;
-}
-</style>
-<style href="/@global/layout.css">*, :before, :after {
-  box-sizing: border-box;
-}
-
-ul, ol, figure, pre {
-  margin: 2em 0;
-}
-
-body {
-  margin: 0 auto;
-  padding: 2% 5%;
-
-  & > header {
-    border-bottom: 1px solid #e5e7eb;
-    justify-content: space-between;
-    align-items: center;
-    height: 64px;
-    display: flex;
-
-    & a {
-      color: var(--gray-900);
-      flex-shrink: 0;
-      align-items: center;
-      gap: .5em;
-      margin-right: 1.5rem;
-      padding: .5em 0;
-      font-size: 1rem;
-      font-weight: bold;
-      text-decoration: none;
-      display: flex;
-
-      &:hover {
-        color: var(--gray-700);
-      }
-
-      &:active {
-        color: var(--gray-600);
-      }
-
-      &:focus {
-        outline: 2px solid var(--blue-500);
-        outline-offset: 2px;
-      }
-    }
-
-    & a:first-child img {
-      border-radius: 50%;
-      width: auto;
-      height: 32px;
-    }
-
-    & nav {
-      display: none;
-    }
-
-    & button {
-      cursor: pointer;
-      color: var(--gray-900);
-      background: none;
-      border: none;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    & button img {
-      width: auto;
-      height: 32px;
-    }
-
-    @media (width >= 768px) {
-      & nav {
-        display: flex;
-      }
-
-      & button, & dialog {
-        display: none;
-      }
-    }
-
-    & nav a {
-      margin-right: 1.5rem;
-      padding: 1em 0;
-      font-size: .875rem;
-      font-weight: 500;
-    }
-
-    & dialog {
-      z-index: 1000;
-      background: #fff;
-      border: none;
-      border-radius: .5rem;
-      width: 98%;
-      margin: 0 auto;
-      padding: 10px;
-      position: fixed;
-      top: 5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
-
-      &::backdrop {
-        background: rgba(0, 0, 0, .5);
-      }
-
-      & > button {
-        cursor: pointer;
-        color: var(--gray-900);
-        background: none;
-        border: none;
-        justify-content: flex-end;
-        align-items: center;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-      }
-
-      & > nav {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-        display: flex;
-      }
-    }
-  }
-
-  & article {
-    & > header {
-      margin-bottom: 2rem;
-    }
-
-    & > section {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-  }
-
-  & footer {
-    border-top: 1px solid #e5e7eb;
-    padding: 2rem 1rem;
-
-    & > nav {
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
-      display: flex;
-
-      & > section {
-        flex: 1;
-        min-width: 200px;
-
-        & h3 {
-          color: var(--gray-900);
-          text-transform: uppercase;
-          margin-bottom: 1rem;
-          font-size: 1rem;
-          font-weight: bold;
-        }
-
-        & > nav {
-          flex-direction: column;
-          gap: .5rem;
-          display: flex;
-
-          & a {
-            color: var(--gray-900);
-            padding: .5em 0;
-            font-size: .875rem;
-            font-weight: 500;
-            text-decoration: none;
-
-            &:hover {
-              color: var(--gray-700);
-            }
-
-            &:active {
-              color: var(--gray-600);
-            }
-
-            &:focus {
-              outline: 2px solid var(--blue-500);
-              outline-offset: 2px;
-            }
-
-            & img {
-              vertical-align: middle;
-              width: auto;
-              height: 22px;
-            }
-          }
-        }
-
-        &:nth-child(4) > nav {
-          flex-flow: wrap;
-          gap: 1rem;
-        }
-      }
-    }
-
-    & > small {
-      text-align: center;
-      color: var(--gray-900);
-      padding-top: 1.5rem;
-      font-size: .875rem;
-      display: block;
-
-      & p {
-        margin: .25rem 0;
-      }
-
-      & a {
-        color: var(--gray-900);
-        text-decoration: none;
-
-        &:hover {
-          color: var(--gray-700);
-        }
-
-        &:active {
-          color: var(--gray-600);
-        }
-
-        &:focus {
-          outline: 2px solid var(--blue-500);
-          outline-offset: 2px;
-        }
-      }
-    }
-
-    @media (width <= 768px) {
-      & > nav {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-    }
-  }
 }
 </style>
 <style href="/@global/typography.css">body {
@@ -401,53 +159,87 @@ blockquote {
 }
 </style>
 <style href="/@library/gallery.css">.gallery {
-  margin-block: 4rem;
+  margin-block: 2rem;
+  margin-inline: auto;
   padding: 0;
   list-style: none;
 
   & li {
-    margin-bottom: 10%;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+
+  & a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
   }
 
   & figure {
+    flex-direction: column;
     align-items: flex-start;
-    gap: 3rem;
-    transition: transform .1s;
+    gap: 1rem;
+    padding: 1rem;
+    transition: transform .15s;
     display: flex;
 
-    &:hover {
-      transform: scale(1.01);
+    @media (width >= 600px) {
+      & {
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: 1.5rem;
+      }
     }
 
-    @media (width < 900px) {
-      & img {
-        display: none;
-      }
+    &:hover {
+      transform: translateY(-2px);
     }
   }
 
   & time {
     color: var(--gray-500);
-    font-size: 85%;
+    margin-bottom: .5rem;
+    font-size: .85rem;
     font-weight: 300;
+    display: block;
   }
 
   & h2 {
     color: var(--gray-800);
-    text-wrap: balance;
     margin: 0;
-    font-size: 1.05em;
-    font-weight: 500;
-    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
   }
 
   & p {
-    margin-block: .5em;
+    color: var(--gray-600);
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    margin-block: .5rem 0;
+    font-size: .95rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    overflow: hidden;
   }
 
   & img {
-    border-radius: 4px;
-    max-width: 18em;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+
+    @media (width >= 600px) {
+      & {
+        width: 120px;
+        height: 120px;
+      }
+    }
   }
 }
 </style>
@@ -492,84 +284,31 @@ article {
 
   <body>
     
-    <header>
-  <a href="/" aria-label="Simon Ngoma Home">
-    <img src="/img/avatar.jpg">
-    Simon Ngoma
-  </a>
-  <nav><a href="/about/">About</a>
-<a href="/services/">Services</a>
-<a href="/projects/">Projects</a>
-<a href="/blog/">Blog</a>
-<a href="/contact/">Contact</a></nav>
-  <button popovertarget="menu" aria-label="Toggle menu">
-     <img src="/img/burger-menu.svg">
-  </button>
-<dialog id="menu" popover>
-  <button class="action" popovertarget="menu">
-    <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/>
-    </svg>
-  </button>
-  <nav><a href="/about/">About</a>
-<a href="/services/">Services</a>
-<a href="/projects/">Projects</a>
-<a href="/blog/">Blog</a>
-<a href="/contact/">Contact</a></nav>
-</dialog>
-</header>
+    
     
     <main>
     
 
     <article>
-      
-      <section><h1>Minimalist, UX developer, designer, urban explorer</h1>
-<p>I&apos;m Emma Bennett, a design engineer from Berlin. I build websites that are exceptionally well-designed &#x2014; inside, and outside.</p>
-<ul class="gallery"><li class="is-new"><time datetime="2025-04-05T15:44:19.775Z">April 5, 2025</time><a href="/blog/"><h2>Minimalist, UX developer, designer, urban explorer</h2><p>I&apos;m Emma Bennett, a design engineer from Berlin. I build websites that are exceptionally well-designed &#x2014; inside, and outside.</p></a></li>
+      <header>
+  <h1></h1>
+  <p>
+    <time datetime="2025-04-06T12:26:45.983Z">April 6, 2025</time> &#x2022; Content by AI &#x2022;
+    Photo credits: <a href="//dribbble.com/"></a>
+  </p>
+
+  <img width="1000" height="800" src="/img/og.jpg" alt="Hero image for">
+</header>
+      <section><ul class="gallery"><li class="is-new"><time datetime="2025-04-06T12:26:45.982Z">April 6, 2025</time><a href="/blog/"></a></li>
 <li><a href="/blog/scaleable-design-system.html"><figure><img src="/blog/img/ui-thumb.png" loading="lazy"><figcaption><time datetime="2025-01-18T00:00:00.000Z">January 18, 2025</time><h2>Crafting a scalable CSS design system</h2><p>Design systems are key to managing code at scale, but creating one that&#x2019;s flexible and maintainable takes work. A key to success is to break UI elements into reusable, abstracted components.</p></figcaption></figure></a></li>
 <li><a href="/blog/color-strategies.html"><figure><img src="/blog/img/colors-thumb.png" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>Practical strategies for using colors in CSS</h2><p>Working with color is one of the most fun parts of web design. In this post, we&apos;ll explore simple, real-world tips for effectively using color in your stylesheets.</p></figcaption></figure></a></li>
-<li><a href="/blog/class-naming-strategies.html"><figure><img src="/blog/img/dashboard-thumb.png" loading="lazy"><figcaption><time datetime="2024-08-13T00:00:00.000Z">August 13, 2024</time><h2>CSS class naming strategies for scalable dashboard design</h2><p>In web development, CSS and design work hand-in-hand to create compelling user experiences. CSS brings designs to life digitally, translating visual mockups into actual rendered elements.</p></figcaption></figure></a></li></ul></section>
+<li><a href="/blog/class-naming-strategies.html"><figure><img src="/blog/img/dashboard-thumb.png" loading="lazy"><figcaption><time datetime="2024-08-13T00:00:00.000Z">August 13, 2024</time><h2>Simon Ngoma &#x2013; Digital Marketing &amp; SEO Consultant</h2><p>Simon Ngoma is a seasoned digital marketing and SEO consultant based in Nairobi, Kenya. With over 10 years of experience in helping brands grow their online presence, Simon specializes in building data-driven marketing strategies, increasing organic traffic, and optimizing websites for higher search engine visibility. His work blends creativity with analytics, delivering measurable results for clients across industries.</p></figcaption></figure></a></li></ul></section>
       
     </article>
 
     
   </main>
-    <footer>
-  <nav>
-    <section>
-      <h3>Services</h3>
-      <nav><a href="/social-media">Social Media Marketing</a>
-<a href="/seo-optimization">SEO Optimization</a>
-<a href="/content-strategy">Content Strategy</a>
-<a href="/paid-advertising">Paid Advertising</a></nav>
-    </section>
-    <section>
-      <h3>Case Studies</h3>
-      <nav><a href="/ecommerce-growth">Ecommerce growth</a>
-<a href="/b2b-lead-generation">B2B lead generation</a>
-<a href="/brand-awareness">Brand awareness</a>
-<a href="/social-media-engagement">Social media engagement</a></nav>
-    </section>
-    <section>
-      <h3>Resources</h3>
-      <nav><a href="/blog">Marketing Blog</a>
-<a href="/free-guides">Free guides</a>
-<a href="/marketing-tools">Marketing Tools</a></nav>
-    </section>
-    <section>
-      <h3>Contact</h3>
-      <nav><a href="//x.com/cymone_rayan"><img src="/img/x-social-media.svg" width="22" height="22" alt="Twitter (X) profile"></a>
-<a href="//linkedin.com/in/ngomasimon3"><img src="/img/linkedin.svg" width="26" height="26" alt="LinkedIn profile"></a>
-<a href="//calendly.com/ngomasimon3/60min"><img src="/img/call.svg" width="26" height="26" alt="Schedule a call"></a>
-<a href="mailto:ngomasimon3@gmail.com"><img src="/img/gmail.svg" width="26" height="26" alt="Email"></a></nav>
-    </section>
-  </nav>
-  <small>
-    <p>&#xa9; 2025 . All rights reserved.</p>
-    <p>Website by <a href="https://www.daveclintonn.cc">David Clinton</a></p>
-  </small>
-</footer>
+    
     
   </body>
 

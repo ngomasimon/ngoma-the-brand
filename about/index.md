@@ -1,5 +1,5 @@
 ---
-title: About Me
+title: Ngoma The Brand
 og: /img/right-image.png
 thumb: /img/right-image.png
 date: 2024-08-13

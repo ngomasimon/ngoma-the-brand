@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-06T12:09:32.023Z">
+<meta name="date.updated" content="2025-04-06T12:52:44.668Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="author" content="Simon Ngoma">
 <meta property="og:image" content="https://simple-blog.nuejs.org/img/og_emma.png">
@@ -387,53 +387,87 @@ p, li {
 }
 </style>
 <style href="/@library/gallery.css">.gallery {
-  margin-block: 4rem;
+  margin-block: 2rem;
+  margin-inline: auto;
   padding: 0;
   list-style: none;
 
   & li {
-    margin-bottom: 10%;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+
+  & a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
   }
 
   & figure {
+    flex-direction: column;
     align-items: flex-start;
-    gap: 3rem;
-    transition: transform .1s;
+    gap: 1rem;
+    padding: 1rem;
+    transition: transform .15s;
     display: flex;
 
-    &:hover {
-      transform: scale(1.01);
+    @media (width >= 600px) {
+      & {
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: 1.5rem;
+      }
     }
 
-    @media (width < 900px) {
-      & img {
-        display: none;
-      }
+    &:hover {
+      transform: translateY(-2px);
     }
   }
 
   & time {
     color: var(--gray-500);
-    font-size: 85%;
+    margin-bottom: .5rem;
+    font-size: .85rem;
     font-weight: 300;
+    display: block;
   }
 
   & h2 {
     color: var(--gray-800);
-    text-wrap: balance;
     margin: 0;
-    font-size: 1.05em;
-    font-weight: 500;
-    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
   }
 
   & p {
-    margin-block: .5em;
+    color: var(--gray-600);
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    margin-block: .5rem 0;
+    font-size: .95rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    overflow: hidden;
   }
 
   & img {
-    border-radius: 4px;
-    max-width: 18em;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+
+    @media (width >= 600px) {
+      & {
+        width: 120px;
+        height: 120px;
+      }
+    }
   }
 }
 </style>
@@ -484,8 +518,7 @@ article {
     Simon Ngoma
   </a>
   <nav><a href="/about/">About</a>
-<a href="/services/">Services</a>
-<a href="/projects/">Projects</a>
+<a href="/all-services/">Services</a>
 <a href="/all-blogs">Blog</a>
 <a href="/contact/">Contact</a></nav>
   <button popovertarget="menu" aria-label="Toggle menu">
@@ -498,8 +531,7 @@ article {
     </svg>
   </button>
   <nav><a href="/about/">About</a>
-<a href="/services/">Services</a>
-<a href="/projects/">Projects</a>
+<a href="/all-services/">Services</a>
 <a href="/all-blogs">Blog</a>
 <a href="/contact/">Contact</a></nav>
 </dialog>

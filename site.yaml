@@ -23,8 +23,7 @@ og: /img/og.jpg
 navigation:
   header:
     - About: /about/
-    - Services: /services/
-    - Projects: /projects/
+    - Services: /all-services/
     - Blog: /all-blogs
     - Contact: /contact/
   logo: /img/avatar.jpg
