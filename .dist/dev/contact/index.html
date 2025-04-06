@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 <title>Ngoma The Brand / Contact me</title>
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-06T13:46:49.759Z">
+<meta name="date.updated" content="2025-04-06T16:58:05.480Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="author" content="Simon Ngoma">
 <meta property="og:title" content="Contact me">
@@ -244,37 +244,39 @@ body {
 
   & footer {
     border-top: 1px solid #e5e7eb;
-    padding: 2rem 1rem;
+    padding: 2.5rem 2rem;
 
     & > nav {
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
+      justify-content: center;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
 
       & > section {
-        flex: 1;
-        min-width: 200px;
-
         & h3 {
           color: var(--gray-900);
-          text-transform: uppercase;
-          margin-bottom: 1rem;
-          font-size: 1rem;
-          font-weight: bold;
+          text-align: center;
+          letter-spacing: .05em;
+          margin-bottom: 1.25rem;
+          font-size: 1.125rem;
+          font-weight: 600;
         }
 
         & > nav {
-          flex-direction: column;
-          gap: .5rem;
+          flex-flow: wrap;
+          align-items: center;
+          gap: 1.5rem;
           display: flex;
 
           & a {
             color: var(--gray-900);
             padding: .5em 0;
-            font-size: .875rem;
+            font-size: .9375rem;
             font-weight: 500;
             text-decoration: none;
+            transition: color .2s;
 
             &:hover {
               color: var(--gray-700);
@@ -287,37 +289,43 @@ body {
             &:focus {
               outline: 2px solid var(--blue-500);
               outline-offset: 2px;
+              border-radius: 2px;
             }
 
             & img {
               vertical-align: middle;
               width: auto;
-              height: 22px;
+              height: 24px;
+              transition: transform .2s;
+            }
+
+            &:hover img {
+              transform: scale(1.1);
             }
           }
-        }
-
-        &:nth-child(4) > nav {
-          flex-flow: wrap;
-          gap: 1rem;
         }
       }
     }
 
     & > small {
       text-align: center;
-      color: var(--gray-900);
-      padding-top: 1.5rem;
+      color: var(--gray-700);
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 2rem;
       font-size: .875rem;
       display: block;
 
       & p {
-        margin: .25rem 0;
+        margin: .5rem 0;
+        line-height: 1.5;
       }
 
       & a {
         color: var(--gray-900);
+        font-weight: 500;
         text-decoration: none;
+        transition: color .2s;
 
         &:hover {
           color: var(--gray-700);
@@ -330,14 +338,24 @@ body {
         &:focus {
           outline: 2px solid var(--blue-500);
           outline-offset: 2px;
+          border-radius: 2px;
         }
       }
     }
 
     @media (width <= 768px) {
+      & {
+        padding: 1.5rem 1rem;
+      }
+
       & > nav {
-        flex-direction: column;
+        justify-content: center;
         gap: 1.5rem;
+      }
+
+      & > nav > section > nav {
+        justify-content: center;
+        gap: 1rem;
       }
     }
   }
@@ -522,26 +540,6 @@ button, [role="button"] {
   </main>
     <footer>
   <nav>
-    <section>
-      <h3>Services</h3>
-      <nav><a href="/social-media">Social Media Marketing</a>
-<a href="/seo-optimization">SEO Optimization</a>
-<a href="/content-strategy">Content Strategy</a>
-<a href="/paid-advertising">Paid Advertising</a></nav>
-    </section>
-    <section>
-      <h3>Case Studies</h3>
-      <nav><a href="/ecommerce-growth">Ecommerce growth</a>
-<a href="/b2b-lead-generation">B2B lead generation</a>
-<a href="/brand-awareness">Brand awareness</a>
-<a href="/social-media-engagement">Social media engagement</a></nav>
-    </section>
-    <section>
-      <h3>Resources</h3>
-      <nav><a href="/blog">Marketing Blog</a>
-<a href="/free-guides">Free guides</a>
-<a href="/marketing-tools">Marketing Tools</a></nav>
-    </section>
     <section>
       <h3>Contact</h3>
       <nav><a href="//x.com/cymone_rayan"><img src="/img/x-social-media.svg" width="22" height="22" alt="Twitter (X) profile"></a>

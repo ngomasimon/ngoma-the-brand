@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-06T16:33:05.532Z">
+<meta name="date.updated" content="2025-04-06T16:58:13.857Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="author" content="Simon Ngoma">
 <meta property="og:image" content="https://simple-blog.nuejs.org/img/og_emma.png">
@@ -242,37 +242,39 @@ body {
 
   & footer {
     border-top: 1px solid #e5e7eb;
-    padding: 2rem 1rem;
+    padding: 2.5rem 2rem;
 
     & > nav {
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
+      justify-content: center;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
 
       & > section {
-        flex: 1;
-        min-width: 200px;
-
         & h3 {
           color: var(--gray-900);
-          text-transform: uppercase;
-          margin-bottom: 1rem;
-          font-size: 1rem;
-          font-weight: bold;
+          text-align: center;
+          letter-spacing: .05em;
+          margin-bottom: 1.25rem;
+          font-size: 1.125rem;
+          font-weight: 600;
         }
 
         & > nav {
-          flex-direction: column;
-          gap: .5rem;
+          flex-flow: wrap;
+          align-items: center;
+          gap: 1.5rem;
           display: flex;
 
           & a {
             color: var(--gray-900);
             padding: .5em 0;
-            font-size: .875rem;
+            font-size: .9375rem;
             font-weight: 500;
             text-decoration: none;
+            transition: color .2s;
 
             &:hover {
               color: var(--gray-700);
@@ -285,37 +287,43 @@ body {
             &:focus {
               outline: 2px solid var(--blue-500);
               outline-offset: 2px;
+              border-radius: 2px;
             }
 
             & img {
               vertical-align: middle;
               width: auto;
-              height: 22px;
+              height: 24px;
+              transition: transform .2s;
+            }
+
+            &:hover img {
+              transform: scale(1.1);
             }
           }
-        }
-
-        &:nth-child(3) > nav {
-          flex-flow: wrap;
-          gap: 1rem;
         }
       }
     }
 
     & > small {
       text-align: center;
-      color: var(--gray-900);
-      padding-top: 1.5rem;
+      color: var(--gray-700);
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 2rem;
       font-size: .875rem;
       display: block;
 
       & p {
-        margin: .25rem 0;
+        margin: .5rem 0;
+        line-height: 1.5;
       }
 
       & a {
         color: var(--gray-900);
+        font-weight: 500;
         text-decoration: none;
+        transition: color .2s;
 
         &:hover {
           color: var(--gray-700);
@@ -328,14 +336,24 @@ body {
         &:focus {
           outline: 2px solid var(--blue-500);
           outline-offset: 2px;
+          border-radius: 2px;
         }
       }
     }
 
     @media (width <= 768px) {
+      & {
+        padding: 1.5rem 1rem;
+      }
+
       & > nav {
-        flex-direction: column;
+        justify-content: center;
         gap: 1.5rem;
+      }
+
+      & > nav > section > nav {
+        justify-content: center;
+        gap: 1rem;
       }
     }
   }
@@ -542,12 +560,12 @@ article {
 
     <article>
       
-      <section><ul class="gallery"><li><a href="/services/consultancy.html"><figure><img src="/services/img/consultation.jpeg" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>How I Deliver Consultancy</h2><p>Hey there! I&#x2019;m Simon Ngoma, the brain behind <strong>Ngoma The Brand LLC</strong>, and I&#x2019;m here to guide you through your business challenges with my <strong>Consultancy</strong> service. Think of me as your strategic partner&#x2014;someone who walks you through the tough stuff with sharp insights and a caring touch, like a grandparent showing you the way through a park. I&#x2019;m all about solving problems, optimizing what you&#x2019;ve got, and setting you up for big wins. Here&#x2019;s how I do it.</p></figcaption></figure></a></li>
-<li><a href="/services/market-audtiting.html"><figure><img src="/services/img/marketing.webp" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>How I Conduct Market Auditing</h2><p>Hey there! I&#x2019;m Simon Ngoma, the driving force behind <strong>Ngoma The Brand LLC</strong>, and I&#x2019;m here to help you unlock the full potential of your business with my <strong>Market Auditing</strong> service. Think of me as your business detective&#x2014;I dive deep into your operations, uncover what&#x2019;s working, spot what&#x2019;s not, and map out a plan to get you results. My audits aren&#x2019;t just reports; they&#x2019;re blueprints for growth. Here&#x2019;s how I do it.</p></figcaption></figure></a></li>
-<li><a href="/services/digital-marketing.html"><figure><img src="/services/img/office.jpeg" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>How I Boost Your Digital Marketing &amp; SEO</h2><p>Hey there! I&#x2019;m Simon Ngoma, the guy behind <strong>Ngoma The Brand LLC</strong>, and I&#x2019;m here to take your online presence to the next level with my <strong>Digital Marketing &amp; SEO</strong> service. I&#x2019;m all about driving real, measurable results&#x2014;more traffic, better leads, and a brand that stands out. Whether you&#x2019;re starting from scratch or need a boost, I&#x2019;ve got the tools and know-how to make it happen. Here&#x2019;s how I do it.</p></figcaption></figure></a></li>
-<li><a href="/services/ui-ux-design.html"><figure><img src="/services/img/ui-ux.webp" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>How I Create Web Development &amp; UI/UX Design</h2><p>Hey there! I&#x2019;m Simon Ngoma, the creative and tech mind behind <strong>Ngoma The Brand LLC</strong>, and I&#x2019;m here to build you a website that doesn&#x2019;t just look good&#x2014;it works hard for your business. My <strong>Web Development &amp; UI/UX Design</strong> service is all about crafting online experiences that are stunning, user-friendly, and built to grow with you. Whether you need a fresh site or a redesign, I&#x2019;ve got the skills to make it happen. Here&#x2019;s how I do it.</p></figcaption></figure></a></li>
-<li><a href="/services/business-consulting.html"><figure><img src="/services/img/business.webp" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>How I Deliver Business &amp; Research Consulting</h2><p>Hey there! I&#x2019;m Simon Ngoma, the heart and mind behind <strong>Ngoma The Brand LLC</strong>. I&#x2019;m passionate about helping businesses like yours thrive through smart systems, deep research, and tailored strategies. My <strong>Business &amp; Research Consulting</strong> service is all about turning your challenges into opportunities with a hands-on, results-driven approach. Let me walk you through how I do it&#x2014;think of me as your guide, blending sharp insights with a personal touch to get you where you want to go.</p></figcaption></figure></a></li>
-<li><a href="/services/systems-development.html"><figure><img src="/services/img/systems.webp" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>How I Handle Systems Development</h2><p>Hey, I&#x2019;m Simon Ngoma, the guy behind <strong>Ngoma The Brand LLC</strong>, and I&#x2019;m obsessed with making businesses run like clockwork. My <strong>Systems Development</strong> service is where I shine&#x2014;building, tweaking, and automating systems that save you time, cut costs, and boost your growth. If you&#x2019;re tired of manual headaches or disjointed processes, I&#x2019;ve got you covered. Here&#x2019;s how I do it.</p></figcaption></figure></a></li></ul></section>
+      <section><ul class="gallery"><li><a href="/services/consultancy.html"><figure><img src="/services/img/consultation.jpeg" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>How I Deliver Consultancy</h2><p><strong>Consultancy</strong> is designed to help organizations solve problems, streamline systems, and implement sustainable strategies. Whether it&#x2019;s digital transformation, marketing strategy, automation, or process optimization, this service provides practical solutions tailored to your unique goals.</p></figcaption></figure></a></li>
+<li><a href="/services/market-audtiting.html"><figure><img src="/services/img/marketing.webp" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>How I Conduct Market Auditing</h2><p>Market audits aren&#x2019;t just about generating reports&#x2014;they&#x2019;re about unlocking the full potential of your business. With a deep dive into your operations, I uncover what&#x2019;s working, spot inefficiencies, and map out a growth strategy. Here&#x2019;s how I do it:</p></figcaption></figure></a></li>
+<li><a href="/services/digital-marketing.html"><figure><img src="/services/img/office.jpeg" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>How I Boost Your Digital Marketing &amp; SEO</h2><p>I help businesses grow online through focused <strong>Digital Marketing &amp; SEO</strong>. That means more traffic, stronger leads, and better results&#x2014;without wasting time or budget. Whether you&#x2019;re just starting out or need to improve what&#x2019;s already in place, I&#x2019;ve got the strategy and tools to make it work.</p></figcaption></figure></a></li>
+<li><a href="/services/ui-ux-design.html"><figure><img src="/services/img/ui-ux.webp" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>How I Create Web Development &amp; UI/UX Design</h2><p>Websites shouldn&#x2019;t just look good&#x2014;they should work hard for your business. This service focuses on crafting online experiences that are visually appealing, user-friendly, and built for growth. Whether it&#x2019;s a fresh build or a redesign, here&#x2019;s the process:</p></figcaption></figure></a></li>
+<li><a href="/services/business-consulting.html"><figure><img src="/services/img/business.webp" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>How I Deliver Business &amp; Research Consulting</h2><p><strong>Business &amp; Research Consulting</strong> is designed to help organizations grow through structured systems, evidence-based strategies, and actionable insights. The service focuses on solving operational challenges, enabling scalability, and making data-driven decisions that deliver real results.</p></figcaption></figure></a></li>
+<li><a href="/services/systems-development.html"><figure><img src="/services/img/systems.webp" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>How I Handle Systems Development</h2><p>I help businesses run like clockwork by building, automating, and optimizing systems that save time, reduce costs, and drive growth. If your current workflows are clunky or disconnected, I design solutions that fix that.</p></figcaption></figure></a></li></ul></section>
       
     </article>
 
@@ -555,20 +573,6 @@ article {
   </main>
     <footer>
   <nav>
-    <section>
-      <h3>Services</h3>
-      <nav><a href="/social-media">Social Media Marketing</a>
-<a href="/seo-optimization">SEO Optimization</a>
-<a href="/content-strategy">Content Strategy</a>
-<a href="/paid-advertising">Paid Advertising</a></nav>
-    </section>
-    <section>
-      <h3>Case Studies</h3>
-      <nav><a href="/ecommerce-growth">Ecommerce growth</a>
-<a href="/b2b-lead-generation">B2B lead generation</a>
-<a href="/brand-awareness">Brand awareness</a>
-<a href="/social-media-engagement">Social media engagement</a></nav>
-    </section>
     <section>
       <h3>Contact</h3>
       <nav><a href="//x.com/cymone_rayan"><img src="/img/x-social-media.svg" width="22" height="22" alt="Twitter (X) profile"></a>
