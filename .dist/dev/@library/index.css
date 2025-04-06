@@ -29,7 +29,7 @@ article > section:first-of-type {
 article > section:first-of-type p:first-of-type {
   color: rgba(0, 0, 0, 0);
   z-index: 1;
-  background: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .65));
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .8));
   grid-template-columns: 1fr 1fr;
   height: 60vh;
   min-height: 450px;
@@ -47,11 +47,14 @@ article > section:first-of-type p:first-of-type:before {
   z-index: 2;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, .5);
+  border-radius: 4px;
+  padding: .5rem 1rem;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
-  font-weight: 400;
+  font-weight: 600;
   position: absolute;
-  bottom: clamp(28%, 14vw, 40%);
+  bottom: clamp(30%, 16vw, 42%);
   left: 50%;
   transform: translateX(-50%);
 }
@@ -204,6 +207,11 @@ article > section:first-of-type p:nth-of-type(2) img {
     margin: 0 auto;
     padding: clamp(1.5rem, 3vw, 3rem);
   }
+
+  article > section:first-of-type p:first-of-type a {
+    padding: clamp(.5rem, 1vw, .75rem) clamp(1rem, 1.5vw, 1.5rem);
+    font-size: clamp(.875rem, 1.5vw, 1rem);
+  }
 }
 
 @media screen and (width >= 1440px) {
@@ -216,5 +224,10 @@ article > section:first-of-type p:nth-of-type(2) img {
     max-width: none;
     margin: 0 auto;
     padding: clamp(2rem, 3vw, 4rem);
+  }
+
+  article > section:first-of-type p:first-of-type a {
+    padding: clamp(.375rem, .8vw, .625rem) clamp(.875rem, 1.2vw, 1.25rem);
+    font-size: clamp(.75rem, 1.2vw, .875rem);
   }
 }

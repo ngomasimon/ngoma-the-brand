@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-05T22:10:11.734Z">
+<meta name="date.updated" content="2025-04-06T08:38:46.527Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="author" content="Emma Bennet">
 <meta property="og:image" content="https://simple-blog.nuejs.org/img/og_emma.png">
@@ -159,9 +159,10 @@ body {
     & > header {
       background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
       border-radius: 12px;
+      width: 100%;
       max-width: 800px;
       margin: 0 auto;
-      padding: 2em;
+      padding: 1.5em;
       box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
 
       & h1 {
@@ -170,14 +171,14 @@ body {
         letter-spacing: 1px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
         margin: 0 0 .5em;
-        font-size: 2.5em;
+        font-size: calc(1.5em + 1vw);
         line-height: 1.2;
       }
 
       & p {
         color: #ccc;
-        margin: 0 0 1.5em;
-        font-size: 1.1em;
+        margin: 0 0 1em;
+        font-size: calc(.9em + .2vw);
         font-style: italic;
       }
 
@@ -204,10 +205,32 @@ body {
         object-fit: cover;
         border: 3px solid #fff;
         border-radius: 8px;
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
         margin: 0 0 1em 1em;
         box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+      }
+
+      @media screen and (width <= 600px) {
+        & header {
+          border-radius: 8px;
+          padding: 1em;
+        }
+
+        & h1 {
+          font-size: calc(1.2em + 1vw);
+        }
+
+        & p {
+          font-size: .9em;
+        }
+
+        & img {
+          float: none;
+          margin: 0 auto 1em;
+          display: block;
+        }
       }
     }
 
@@ -489,7 +512,7 @@ article {
       
       <section><ul class="gallery"><li><a href="/blog/scaleable-design-system.html"><figure><img src="/blog/img/ui-thumb.png" loading="lazy"><figcaption><time datetime="2025-01-18T00:00:00.000Z">January 18, 2025</time><h2>Crafting a scalable CSS design system</h2><p>Design systems are key to managing code at scale, but creating one that&#x2019;s flexible and maintainable takes work. A key to success is to break UI elements into reusable, abstracted components.</p></figcaption></figure></a></li>
 <li><a href="/blog/color-strategies.html"><figure><img src="/blog/img/colors-thumb.png" loading="lazy"><figcaption><time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time><h2>Practical strategies for using colors in CSS</h2><p>Working with color is one of the most fun parts of web design. In this post, we&apos;ll explore simple, real-world tips for effectively using color in your stylesheets.</p></figcaption></figure></a></li>
-<li><a href="/blog/class-naming-strategies.html"><figure><img src="/blog/img/dashboard-thumb.png" loading="lazy"><figcaption><time datetime="2024-08-13T00:00:00.000Z">August 13, 2024</time><h2>CSS class naming strategies for scalable dashboard design</h2><p>In web development, CSS and design work hand-in-hand to create compelling user experiences. CSS brings designs to life digitally, translating visual mockups into actual rendered elements.</p></figcaption></figure></a></li></ul></section>
+<li><a href="/blog/class-naming-strategies.html"><figure><img src="/blog/img/dashboard-thumb.png" loading="lazy"><figcaption><time datetime="2024-08-13T00:00:00.000Z">August 13, 2024</time><h2>Simon Ngoma &#x2013; Digital Marketing &amp; SEO Consultant</h2><p>Simon Ngoma is a seasoned digital marketing and SEO consultant based in Nairobi, Kenya. With over 10 years of experience in helping brands grow their online presence, Simon specializes in building data-driven marketing strategies, increasing organic traffic, and optimizing websites for higher search engine visibility. His work blends creativity with analytics, delivering measurable results for clients across industries.</p></figcaption></figure></a></li></ul></section>
       
     </article>
 

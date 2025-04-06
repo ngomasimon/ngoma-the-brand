@@ -1,22 +1,50 @@
 ---
-title: CSS class naming strategies for scalable dashboard design
+title: Simon Ngoma – Digital Marketing & SEO Consultant
 og: img/dashboard-3.png
 thumb: img/dashboard-thumb.png
 date: 2024-08-13
 credits: ui8
 ---
 
-In web development, CSS and design work hand-in-hand to create compelling user experiences. CSS brings designs to life digitally, translating visual mockups into actual rendered elements.
+Simon Ngoma is a seasoned digital marketing and SEO consultant based in Nairobi, Kenya. With over 10 years of experience in helping brands grow their online presence, Simon specializes in building data-driven marketing strategies, increasing organic traffic, and optimizing websites for higher search engine visibility. His work blends creativity with analytics, delivering measurable results for clients across industries.
 
-## Keep them short
+## Background
 
-When designing for the web, keeping CSS in mind from the start prevents frustration down the road. For example, layered graphical elements must be broken down into achievable HTML components. Typography and color schemes are also heavily influenced by CSS possibilities.
+Simon’s passion for digital technology began early. While studying Computer Science at the **University of Nairobi**, he became fascinated with how search engines worked and how online content could be optimized for visibility. He wrote his thesis on *The Role of Semantic Markup in Improving Search Engine Rankings* and interned with a local web agency where he helped launch SEO campaigns for small businesses.
 
-Designers should have a strong handle on core CSS concepts like the box model, selectors, specificity and inheritance.
+After graduating in 2013 with first-class honors, Simon worked as a junior digital strategist at **BlueDot Media**, where he helped build marketing funnels and improve ROI on ad spend for local e-commerce stores. Over time, he developed a reputation for being both highly analytical and easy to work with—traits that would later form the foundation of his consulting practice.
 
-> When designing for the web, keeping CSS in mind from the start prevents frustration down the road. For example, **typography and color schemes are heavily influenced by CSS** and layered graphical elements must be broken down into achievable HTML components.
+## Areas of Expertise
 
-``` js .blue
+Simon offers consulting services to startups, agencies, NGOs, and enterprise clients in the following areas:
+
+- **Search Engine Optimization (SEO)**
+  - Technical SEO audits
+  - Keyword research and content strategy
+  - Link building and outreach campaigns
+  - Local SEO optimization
+- **Pay-Per-Click (PPC) Advertising**
+  - Google Ads and Facebook Ads
+  - A/B testing and performance tracking
+  - Retargeting and funnel optimization
+- **Content Marketing**
+  - SEO-optimized blog strategies
+  - Email marketing campaigns
+  - Landing page optimization
+- **Web Analytics**
+  - Google Analytics 4 (GA4) implementation
+  - Conversion rate optimization (CRO)
+  - Dashboard creation and custom reporting
+
+> “Digital marketing isn’t about traffic. It’s about the *right* traffic. I help businesses attract, engage, and convert with purpose.” – Simon Ngoma
+
+## Recent Projects
+
+Simon recently led SEO efforts for a regional logistics startup, helping increase organic traffic by **275%** over six months. He performed a full technical audit, implemented schema markup, optimized over 80 content pages, and trained their internal team on best practices.
+
+He also designed and managed a multi-channel campaign for a fintech app targeting East African millennials. The campaign resulted in **18,000+ new installs**, with a customer acquisition cost 22% lower than projected.
+
+```js .blue
 function toggleAttr(el, name, flag) {
   flag ? el.setAttribute(name, 1) :  el.removeAttribute(name)
 }
@@ -29,35 +57,3 @@ function restoreTabs(flags) {
     toggleAttr(panels[i], 'hidden', !flags[i])
   })
 }
-```
-
-## Exploit the power of selectors
-
-On the development side, CSS itself involves visual design skills. Bringing a layout to life requires not just coding, but typographic, spacing and color sensibilities. CSS skills give developers control over the final look and feel.
-
-[! img/dashboard-1.png]
-
-Overall, CSS is a uniquely visual language, with a direct impact on user-facing design. By embracing its connection to the design process, both designers and developers can build interfaces that are engaging and "CSS-native". The closer these roles work together, the better the end result. (edited)
-
-
-## Conclusion
-
-In conclusion, thoughtfully naming CSS classes, IDs, and other selectors is an important part of keeping stylesheets scalable and maintainable. Use semantic, descriptive names that communicate what a selector is styling. Implement methodical naming conventions and structures for better organization.
-
-
-```css .pink
-.pink {
-  background-image: linear-gradient(#e879f9, #ec4899);
-  padding: 3em 0 0 3em;
-  border-radius: .8em;
-  overflow: hidden;
-  margin: 1.5em 0 2em;
-
-  pre {
-    padding: 2em;
-    margin: 0;
-  }
-}
-```
-
-Avoid repetitive and overly specific names by separating structural styles from visual ones. And don’t be afraid to chain multiple classes together for more modular and flexible selectors.
