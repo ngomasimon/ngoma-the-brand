@@ -56,8 +56,10 @@ If you're struggling with customer retention or wasting money on ads, my audit w
 
 Let’s dive into your business and uncover what’s possible. Full marketing audits start at **$2850**, or you can use my A-list template at a lower cost. Either way, you’ll get a tailored plan for success.  
 - **Email**: [ngomasimon3@gmail.com](mailto:ngomasimon3@gmail.com)  
-- **Website**: [ngomathebrand.co.ke](http://ngomathebrand.co.ke)  
-- **LinkedIn**: [https://www.linkedin.com/in/ngoma-simon-1b0ab2114](https://www.linkedin.com/in/ngoma-simon-1b0ab2114)  
-- **Book a Call**: *(Link coming soon—stay tuned!)*
+- **Website**: [ngomathebrand.co.ke](/all-services/)
+- **LinkedIn**: [linkedin.com/in/ngoma-simon-1b0ab2114](https://www.linkedin.com/in/ngoma-simon-1b0ab2114)  
+- **Book a Call**: [calendly.com/ngomasimon3/60min](https://www.calendly.com/ngomasimon3/60min)
+- **TikTok**: [tiktok.com/@simonngoma](https://www.tiktok.com/@simonngoma?_t=ZS-8vIsE6rR1Nv&_r=1)
+- **Facebook**: [facebook.com](https://www.facebook.com/share/1R6SnUwQam/)
 
 Let’s make your marketing unstoppable.

@@ -54,7 +54,9 @@ This isn’t just about tech—it’s about creating a business backbone that ru
 
 Let’s get your operations running smoother and smarter.  
 - **Email**: [ngomasimon3@gmail.com](mailto:ngomasimon3@gmail.com)  
-- **Website**: [ngomathebrand.co.ke](http://ngomathebrand.co.ke)  
+- **Website**: [ngomathebrand.co.ke](/all-services/)
 - **LinkedIn**: [linkedin.com/in/ngoma-simon-1b0ab2114](https://www.linkedin.com/in/ngoma-simon-1b0ab2114)  
-- **Book a Call**: *(Link coming soon—stay tuned)*
+- **Book a Call**: [calendly.com/ngomasimon3/60min](https://www.calendly.com/ngomasimon3/60min)
+- **TikTok**: [tiktok.com/@simonngoma](https://www.tiktok.com/@simonngoma?_t=ZS-8vIsE6rR1Nv&_r=1)
+- **Facebook**: [facebook.com](https://www.facebook.com/share/1R6SnUwQam/)
 
