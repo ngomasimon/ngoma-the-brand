@@ -6,13 +6,13 @@
     <meta charset="utf-8">
 <title>Ngoma The Brand / Contact me</title>
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-06T17:23:05.769Z">
+<meta name="date.updated" content="2025-04-06T20:53:07.627Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="author" content="Simon Ngoma">
 <meta property="og:title" content="Contact me">
 <meta property="og:image" content="https://simple-blog.nuejs.org/img/og_emma.png">
 <meta name="nue:components" content="/contact/contact.js">
-<meta name="nue:include" content="form">
+<meta name="nue:include" content="form contact">
 <meta name="nue:globals" content="@global">
 <meta name="nue:libs" content="@library">
 <link rel="icon" type="image/jpg" href="/img/favicon.jpg">
@@ -460,34 +460,94 @@ button, [role="button"] {
 }
 </style>
 <style href="/contact/contact.css">main article section {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   max-width: none;
-
-  & h1, & p {
-    text-align: left;
-  }
+  margin: 0 auto;
+  display: flex;
 }
 
 .stack {
   gap: 3em;
+  width: 100%;
+  max-width: 1200px;
   display: flex;
 
   & > * {
-    flex: 1;
-  }
-
-  & figure {
-    margin: 0;
-  }
-
-  & img {
-    border-radius: 4px;
+    display: none;
   }
 
   @media (width <= 1000px) {
     & {
       flex-direction: column;
-      max-width: 460px;
     }
+  }
+}
+
+.stack > div:first-child {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2em;
+  display: flex;
+}
+
+form[custom="contact-me"] {
+  width: 100%;
+  max-width: 500px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gray-100);
+  border-color: var(--main-500);
+  outline-offset: 1px;
+}
+
+label {
+  margin-bottom: 1em;
+  display: block;
+
+  & span {
+    margin-bottom: .3em;
+    font-weight: 500;
+    display: block;
+  }
+}
+
+input, textarea {
+  border: 1px solid var(--gray-200);
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 4px;
+  width: 100%;
+  padding: .7em 1em;
+}
+
+textarea {
+  resize: vertical;
+  form-sizing: normal;
+  min-height: 80px;
+}
+
+button, [role="button"] {
+  background-color: var(--main-500);
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  padding: .75em 1.5em;
+  font-weight: 550;
+
+  &:hover {
+    background-color: var(--main-600);
+  }
+
+  &:active {
+    transform: translateY(1px);
   }
 }
 </style>
@@ -532,7 +592,7 @@ button, [role="button"] {
       <section><div class="stack"><div><h1>Contact me</h1>
 <p>I&apos;m currently available for hire</p>
 <contact-me custom="contact-me"></contact-me></div>
-<div><figure><img loading="lazy" src="/img/profile.jpg" width="460" height="460"></figure></div></div></section>
+<div></div></div></section>
       
     </article>
 
@@ -543,9 +603,11 @@ button, [role="button"] {
     <section>
       <h3>Contact</h3>
       <nav><a href="//x.com/cymone_rayan"><img src="/img/x-social-media.svg" width="22" height="22" alt="Twitter (X) profile"></a>
-<a href="//linkedin.com/in/ngomasimon3"><img src="/img/linkedin.svg" width="26" height="26" alt="LinkedIn profile"></a>
+<a href="//linkedin.com/in/ngoma-simon-1b0ab2114"><img src="/img/linkedin.svg" width="26" height="26" alt="LinkedIn profile"></a>
 <a href="//calendly.com/ngomasimon3/60min"><img src="/img/call.svg" width="26" height="26" alt="Schedule a call"></a>
-<a href="mailto:ngomasimon3@gmail.com"><img src="/img/gmail.svg" width="26" height="26" alt="Email"></a></nav>
+<a href="mailto:ngomasimon3@gmail.com"><img src="/img/gmail.svg" width="26" height="26" alt="Gmail"></a>
+<a href="//tiktok.com/@simonngoma"><img src="/img/tiktok.svg" width="26" height="26" alt="Tiktok"></a>
+<a href="//tiktok.com/@simonngoma"><img src="/img/Facebook.svg" width="26" height="26" alt="Facebook"></a></nav>
     </section>
   </nav>
   <small>

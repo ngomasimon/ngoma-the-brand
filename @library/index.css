@@ -1,18 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 18px; /* Increased base font size */
-  line-height: 1.8; /* Improved readability */
+  font-size: 18px;
+  line-height: 1.8;
 }
 
-/* Header */
 body > header {
   padding: clamp(1.5rem, 3vw, 3rem) clamp(2.5rem, 5vw, 5rem);
   position: relative;
   z-index: 2;
 }
 
-/* Article */
 article {
   margin: 0;
   padding: 0;

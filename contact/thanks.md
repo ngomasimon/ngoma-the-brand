@@ -1,6 +1,4 @@
 
-# Thank you!
+# Thank you!  I'll get back to you
 
-I'll send you a calendar invitation
 
-[! /blog/img/ui-1.png width="500"]
