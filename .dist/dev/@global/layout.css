@@ -267,7 +267,7 @@ body {
           }
         }
 
-        &:nth-child(4) > nav {
+        &:nth-child(3) > nav {
           flex-flow: wrap;
           gap: 1rem;
         }
