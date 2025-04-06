@@ -59,4 +59,3 @@ Let’s get your operations running smoother and smarter.
 - **Book a Call**: [calendly.com/ngomasimon3/60min](https://www.calendly.com/ngomasimon3/60min)
 - **TikTok**: [tiktok.com/@simonngoma](https://www.tiktok.com/@simonngoma?_t=ZS-8vIsE6rR1Nv&_r=1)
 - **Facebook**: [facebook.com](https://www.facebook.com/share/1R6SnUwQam/)
-
