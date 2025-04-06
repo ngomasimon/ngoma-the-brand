@@ -1,7 +1,7 @@
 ---
 title: How I Conduct Market Auditing
-thumb: img/colors-2.jpg  
-og: img/colors-2.jpg  
+thumb: img/marketing.webp
+og: img/marketing.webp 
 date: 2024-11-23  
 ---
 

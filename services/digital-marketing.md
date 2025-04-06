@@ -1,7 +1,7 @@
 ---
 title: How I Boost Your Digital Marketing & SEO
-thumb: img/colors-2.jpg  
-og: img/colors-2.jpg  
+thumb: img/office.jpeg 
+og: img/office.jpeg 
 date: 2024-11-23  
 ---
 

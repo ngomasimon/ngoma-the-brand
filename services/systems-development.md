@@ -1,7 +1,7 @@
 ---
 title: How I Handle Systems Development
-thumb: img/colors-2.jpg  
-og: img/colors-2.jpg  
+thumb: img/systems.webp  
+og: img/systems.webp  
 date: 2024-11-23  
 ---
 

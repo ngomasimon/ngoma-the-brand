@@ -1,7 +1,7 @@
 ---
 title: How I Deliver Business & Research Consulting
-thumb: img/colors-2.jpg  
-og: img/colors-2.jpg  
+thumb: img/business.webp 
+og: img/business.webp  
 date: 2024-11-23  
 ---
 

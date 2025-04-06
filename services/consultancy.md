@@ -1,7 +1,7 @@
 ---
 title: How I Deliver Consultancy
-thumb: img/colors-2.jpg  
-og: img/colors-2.jpg  
+thumb: img/consultation.jpeg 
+og: img/consultation.jpeg 
 date: 2024-11-23  
 ---
 

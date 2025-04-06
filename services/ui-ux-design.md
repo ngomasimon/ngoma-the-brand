@@ -1,7 +1,7 @@
 ---
 title: How I Create Web Development & UI/UX Design
-thumb: img/colors-2.jpg  
-og: img/colors-2.jpg 
+thumb: img/ui-ux.webp  
+og: img/ui-ux.webp 
 date: 2024-11-23  
 ---
 
