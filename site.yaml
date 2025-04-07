@@ -11,7 +11,7 @@ sections: true
 title_template: "Ngoma The Brand / %s"
 og_image: /img/og_emma.png
 author: Simon Ngoma
-favicon: /img/favicon.jpg
+favicon: /img/favicon.ico
 description: Digital Media Consultant
 port: 8083
 
