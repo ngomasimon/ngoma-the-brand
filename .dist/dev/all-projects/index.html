@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-07T07:31:29.255Z">
+<meta name="date.updated" content="2025-04-07T07:47:08.814Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="author" content="Simon Ngoma">
 <meta property="og:image" content="https://simple-blog.nuejs.org/img/og_emma.png">
@@ -40,117 +40,83 @@ body {
 
   & > header {
     border-bottom: 1px solid #e5e7eb;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 64px;
+    height: auto;
+    padding: .5rem 1rem;
     display: flex;
 
     & a {
       color: var(--gray-900);
-      flex-shrink: 0;
       align-items: center;
-      gap: .5em;
-      margin-right: 1.5rem;
-      padding: .5em 0;
+      gap: .5rem;
+      padding: .5rem;
       font-size: 1rem;
       font-weight: bold;
       text-decoration: none;
+      transition: color .2s, transform .2s;
       display: flex;
+    }
 
-      &:hover {
-        color: var(--gray-700);
-      }
-
-      &:active {
-        color: var(--gray-600);
-      }
-
-      &:focus {
-        outline: 2px solid var(--blue-500);
-        outline-offset: 2px;
-      }
+    & a:hover {
+      color: var(--gray-700);
+      transform: translateY(-2px);
     }
 
     & a:first-child img {
+      border: 2px solid var(--gray-700);
       border-radius: 50%;
       width: auto;
       height: 32px;
     }
 
     & nav {
-      display: none;
-    }
-
-    & button {
-      cursor: pointer;
-      color: var(--gray-900);
-      background: none;
-      border: none;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      padding: 0;
+      flex-wrap: wrap;
+      gap: .5rem;
       display: flex;
     }
 
-    & button img {
-      width: auto;
-      height: 32px;
-    }
-
-    @media (width >= 768px) {
-      & nav {
-        display: flex;
-      }
-
-      & button, & dialog {
-        display: none;
-      }
-    }
-
     & nav a {
-      margin-right: 1.5rem;
-      padding: 1em 0;
+      border-radius: .25rem;
+      padding: .5rem 1rem;
       font-size: .875rem;
       font-weight: 500;
     }
 
-    & dialog {
-      z-index: 1000;
-      background: #fff;
-      border: none;
-      border-radius: .5rem;
-      width: 98%;
-      margin: 0 auto;
-      padding: 10px;
-      transition: transform 2s ease-out, opacity .3s ease-out;
-      position: fixed;
-      top: 5px;
-      transform: translateY(20px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
-
-      &::backdrop {
-        background: rgba(0, 0, 0, .5);
-      }
-
-      & > button {
-        cursor: pointer;
-        color: var(--gray-900);
-        background: none;
-        border: none;
-        justify-content: flex-end;
-        align-items: center;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-      }
-
-      & > nav {
+    @media (width <= 767px) {
+      & header {
         flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-        display: flex;
+        align-items: flex-start;
+      }
+
+      & nav {
+        justify-content: space-around;
+        width: 100%;
+        margin-top: .5rem;
+      }
+
+      & nav a {
+        text-align: center;
+        flex: 1;
+        padding: .5rem 0;
+      }
+    }
+
+    @media (width >= 768px) {
+      & header {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      & nav {
+        justify-content: flex-end;
+        width: auto;
+        margin-top: 0;
+      }
+
+      & nav a {
+        flex: none;
       }
     }
   }
@@ -539,20 +505,6 @@ article {
 <a href="/all-services/">Services</a>
 <a href="/all-projects/">Projects</a>
 <a href="/contact/">Contact</a></nav>
-  <button popovertarget="menu" aria-label="Toggle menu">
-     <img src="/img/burger-menu.svg">
-  </button>
-<dialog id="menu" popover>
-  <button class="action" popovertarget="menu">
-    <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/>
-    </svg>
-  </button>
-  <nav><a href="/about/">About</a>
-<a href="/all-services/">Services</a>
-<a href="/all-projects/">Projects</a>
-<a href="/contact/">Contact</a></nav>
-</dialog>
 </header>
     
     <main>
@@ -560,8 +512,7 @@ article {
 
     <article>
       
-      <section><ul class="gallery"><li><a href="/projects/scaleable-design-system.html"><figure><img src="/projects/img/ui-thumb.png" loading="lazy"><figcaption><time datetime="2025-01-18T00:00:00.000Z">January 18, 2025</time><h2>Crafting a scalable CSS design system</h2><p>Design systems are key to managing code at scale, but creating one that&#x2019;s flexible and maintainable takes work. A key to success is to break UI elements into reusable, abstracted components.</p></figcaption></figure></a></li>
-<li><a href="/projects/intent-analyzer.html"><figure><img src="/projects/img/intent.png" loading="lazy"><figcaption><time datetime="2025-01-18T00:00:00.000Z">January 18, 2025</time><h2>Intent Analyzer</h2><p><strong>Gain Data-Driven Insights with Intent Analyzer</strong></p></figcaption></figure></a></li></ul></section>
+      <section><ul class="gallery"><li><a href="/projects/intent-analyzer.html"><figure><img src="/projects/img/intent.png" loading="lazy"><figcaption><time datetime="2025-01-18T00:00:00.000Z">January 18, 2025</time><h2>Intent Analyzer</h2><p><strong>Gain Data-Driven Insights with Intent Analyzer</strong></p></figcaption></figure></a></li></ul></section>
       
     </article>
 
