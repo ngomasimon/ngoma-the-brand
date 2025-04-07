@@ -24,29 +24,12 @@ navigation:
   header:
     - About: /about/
     - Services: /all-services/
-    - Blog: /all-blogs
+    - Projects: /all-projects/
     - Contact: /contact/
   logo: /img/avatar.jpg
   menu: /img/burger-menu.svg
 
   footer:
-    services:
-    - Social Media Marketing : /social-media
-    - SEO Optimization : /seo-optimization
-    - Content Strategy : /content-strategy
-    - Paid Advertising : /paid-advertising
-    
-    studies:
-    - Ecommerce growth: /ecommerce-growth
-    - B2B lead generation: /b2b-lead-generation
-    - Brand awareness: /brand-awareness
-    - Social media engagement: /social-media-engagement
-
-    resources:
-    - Marketing Blog: /blog
-    - Free guides: /free-guides
-    - Marketing Tools: /marketing-tools
-
     contact:
     - image: /img/x-social-media.svg
       url: //x.com/cymone_rayan

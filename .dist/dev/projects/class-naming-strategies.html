@@ -4,16 +4,16 @@
 
   <head>
     <meta charset="utf-8">
-<title>Emma Bennet / Practical strategies for using colors in CSS</title>
+<title>Ngoma The Brand / Simon Ngoma &#x2013; Digital Marketing &amp; SEO Consultant</title>
 <meta name="generator" content="Nue v1.0.0-RC.2 (nuejs.org)">
-<meta name="date.updated" content="2025-04-05T22:10:13.852Z">
+<meta name="date.updated" content="2025-04-07T07:23:53.764Z">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Working with color is one of the most fun parts of web design. In this post, we&apos;ll explore simple, real-world tips for effectively using color in your stylesheets.">
-<meta name="author" content="Emma Bennet">
-<meta property="og:title" content="Practical strategies for using colors in CSS">
-<meta property="og:description" content="Working with color is one of the most fun parts of web design. In this post, we&apos;ll explore simple, real-world tips for effectively using color in your stylesheets.">
+<meta name="description" content="Simon Ngoma is a seasoned digital marketing and SEO consultant based in Nairobi, Kenya. With over 10 years of experience in helping brands grow their online presence, Simon specializes in building data-driven marketing strategies, increasing organic traffic, and optimizing websites for higher search engine visibility. His work blends creativity with analytics, delivering measurable results for clients across industries.">
+<meta name="author" content="Simon Ngoma">
+<meta property="og:title" content="Simon Ngoma &#x2013; Digital Marketing &amp; SEO Consultant">
+<meta property="og:description" content="Simon Ngoma is a seasoned digital marketing and SEO consultant based in Nairobi, Kenya. With over 10 years of experience in helping brands grow their online presence, Simon specializes in building data-driven marketing strategies, increasing organic traffic, and optimizing websites for higher search engine visibility. His work blends creativity with analytics, delivering measurable results for clients across industries.">
 <meta property="og:image" content="https://simple-blog.nuejs.org/img/og_emma.png">
-<meta property="article:published_time" content="Sat Nov 23 2024 03:00:00 GMT+0300 (East Africa Time)">
+<meta property="article:published_time" content="Tue Aug 13 2024 03:00:00 GMT+0300 (East Africa Time)">
 <meta name="nue:components" content=" ">
 <meta name="nue:include" content="content cards motion">
 <meta name="nue:globals" content="@global">
@@ -164,9 +164,10 @@ body {
     & > header {
       background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
       border-radius: 12px;
+      width: 100%;
       max-width: 800px;
       margin: 0 auto;
-      padding: 2em;
+      padding: 1.5em;
       box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
 
       & h1 {
@@ -175,14 +176,14 @@ body {
         letter-spacing: 1px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
         margin: 0 0 .5em;
-        font-size: 2.5em;
+        font-size: calc(1.5em + 1vw);
         line-height: 1.2;
       }
 
       & p {
         color: #ccc;
-        margin: 0 0 1.5em;
-        font-size: 1.1em;
+        margin: 0 0 1em;
+        font-size: calc(.9em + .2vw);
         font-style: italic;
       }
 
@@ -209,10 +210,32 @@ body {
         object-fit: cover;
         border: 3px solid #fff;
         border-radius: 8px;
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
         margin: 0 0 1em 1em;
         box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+      }
+
+      @media screen and (width <= 600px) {
+        & header {
+          border-radius: 8px;
+          padding: 1em;
+        }
+
+        & h1 {
+          font-size: calc(1.2em + 1vw);
+        }
+
+        & p {
+          font-size: .9em;
+        }
+
+        & img {
+          float: none;
+          margin: 0 auto 1em;
+          display: block;
+        }
       }
     }
 
@@ -224,37 +247,39 @@ body {
 
   & footer {
     border-top: 1px solid #e5e7eb;
-    padding: 2rem 1rem;
+    padding: 2.5rem 2rem;
 
     & > nav {
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
+      justify-content: center;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
 
       & > section {
-        flex: 1;
-        min-width: 200px;
-
         & h3 {
           color: var(--gray-900);
-          text-transform: uppercase;
-          margin-bottom: 1rem;
-          font-size: 1rem;
-          font-weight: bold;
+          text-align: center;
+          letter-spacing: .05em;
+          margin-bottom: 1.25rem;
+          font-size: 1.125rem;
+          font-weight: 600;
         }
 
         & > nav {
-          flex-direction: column;
-          gap: .5rem;
+          flex-flow: wrap;
+          align-items: center;
+          gap: 1.5rem;
           display: flex;
 
           & a {
             color: var(--gray-900);
             padding: .5em 0;
-            font-size: .875rem;
+            font-size: .9375rem;
             font-weight: 500;
             text-decoration: none;
+            transition: color .2s;
 
             &:hover {
               color: var(--gray-700);
@@ -267,37 +292,43 @@ body {
             &:focus {
               outline: 2px solid var(--blue-500);
               outline-offset: 2px;
+              border-radius: 2px;
             }
 
             & img {
               vertical-align: middle;
               width: auto;
-              height: 22px;
+              height: 24px;
+              transition: transform .2s;
+            }
+
+            &:hover img {
+              transform: scale(1.1);
             }
           }
-        }
-
-        &:nth-child(4) > nav {
-          flex-flow: wrap;
-          gap: 1rem;
         }
       }
     }
 
     & > small {
       text-align: center;
-      color: var(--gray-900);
-      padding-top: 1.5rem;
+      color: var(--gray-700);
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 2rem;
       font-size: .875rem;
       display: block;
 
       & p {
-        margin: .25rem 0;
+        margin: .5rem 0;
+        line-height: 1.5;
       }
 
       & a {
         color: var(--gray-900);
+        font-weight: 500;
         text-decoration: none;
+        transition: color .2s;
 
         &:hover {
           color: var(--gray-700);
@@ -310,14 +341,24 @@ body {
         &:focus {
           outline: 2px solid var(--blue-500);
           outline-offset: 2px;
+          border-radius: 2px;
         }
       }
     }
 
     @media (width <= 768px) {
+      & {
+        padding: 1.5rem 1rem;
+      }
+
       & > nav {
-        flex-direction: column;
+        justify-content: center;
         gap: 1.5rem;
+      }
+
+      & > nav > section > nav {
+        justify-content: center;
+        gap: 1rem;
       }
     }
   }
@@ -502,9 +543,8 @@ article {
     Simon Ngoma
   </a>
   <nav><a href="/about/">About</a>
-<a href="/services/">Services</a>
-<a href="/projects/">Projects</a>
-<a href="/all-blogs">Blog</a>
+<a href="/all-services/">Services</a>
+<a href="/all-projects/">Projects</a>
 <a href="/contact/">Contact</a></nav>
   <button popovertarget="menu" aria-label="Toggle menu">
      <img src="/img/burger-menu.svg">
@@ -516,9 +556,8 @@ article {
     </svg>
   </button>
   <nav><a href="/about/">About</a>
-<a href="/services/">Services</a>
-<a href="/projects/">Projects</a>
-<a href="/all-blogs">Blog</a>
+<a href="/all-services/">Services</a>
+<a href="/all-projects/">Projects</a>
 <a href="/contact/">Contact</a></nav>
 </dialog>
 </header>
@@ -528,70 +567,57 @@ article {
 
     <article>
       <header>
-  <h1>Practical strategies for using colors in CSS</h1>
+  <h1>Simon Ngoma &#x2013; Digital Marketing &amp; SEO Consultant</h1>
   <p>
-    <time datetime="2024-11-23T00:00:00.000Z">November 23, 2024</time> &#x2022; Content by AI &#x2022;
-    Photo credits: <a href="//dribbble.com/BalkanBrothers">BalkanBrothers</a>
+    <time datetime="2024-08-13T00:00:00.000Z">August 13, 2024</time> &#x2022; Content by Simon Ngoma &#x2022;
   </p>
 
-  <img width="1000" height="800" src="img/colors-2.jpg" alt="Hero image for Practical strategies for using colors in CSS">
+  <img width="1000" height="800" src="img/dashboard-3.png" alt="Hero image for Simon Ngoma &#x2013; Digital Marketing &amp; SEO Consultant">
 </header>
-      <section><p>Working with color is one of the most fun parts of web design. In this post, we&apos;ll explore simple, real-world tips for effectively using color in your stylesheets.</p></section>
+      <section><p>Simon Ngoma is a seasoned digital marketing and SEO consultant based in Nairobi, Kenya. With over 10 years of experience in helping brands grow their online presence, Simon specializes in building data-driven marketing strategies, increasing organic traffic, and optimizing websites for higher search engine visibility. His work blends creativity with analytics, delivering measurable results for clients across industries.</p></section>
 
-<section><h2>How to create a foolproof color palette</h2>
-<p>Choosing the right colors for a website can be tricky. Get one wrong and your entire design can feel off. Luckily, there are some simple strategies to create a foolproof web color palette:</p>
-<ul><li><p><strong>Limit your palette</strong> &#x2014; Stick to just 2-4 core colors for most sites. Too many colors look disjointed.</p></li>
-<li><p><strong>Focus on one dominant hue</strong> &#x2014; Pick one main color and derive the rest of the palette from it. This creates cohesion.</p></li>
-<li><p><strong>Use color wheel relationships</strong> &#x2014; Choose adjacent or complementary colors on the wheel for built-in harmony.</p></li>
-<li><p><strong>Consider tone and contrast</strong> &#x2014; Include light, medium and dark tones for visual interest. Test contrast for accessibility.</p></li></ul>
-<div class="blue"><pre><code language="css"><sup>/* Tab styling */</sup>
-<i>[</i><b>role</b><i>=</i>tablist<i>]</i> <i>{</i>
-  <b>background</b><i>:</i> <b>rgba</b><i>(</i><em>0</em><i>,</i> <em>0</em><i>,</i> <em>0</em><i>,</i> <i>.</i><em>7</em><i>)</i><i>;</i>
-  <b>background-size</b><i>:</i> <em>3.8em</em><i>;</i>
-<dfn>  <b>padding</b><i>:</i> <i>.</i><em>7em</em> <em>1.3em</em> <em>0</em><i>;</i></dfn>
-<dfn>  <b>overflow</b><i>:</i> hidden<i>;</i></dfn>
-<dfn>  <b>display</b><i>:</i> flex<i>;</i></dfn>
+<section><h2>Background</h2>
+<p>Simon&#x2019;s passion for digital technology began early. While studying Computer Science at the <strong>University of Nairobi</strong>, he became fascinated with how search engines worked and how online content could be optimized for visibility. He wrote his thesis on <em>The Role of Semantic Markup in Improving Search Engine Rankings</em> and interned with a local web agency where he helped launch SEO campaigns for small businesses.</p>
+<p>After graduating in 2013 with first-class honors, Simon worked as a junior digital strategist at <strong>BlueDot Media</strong>, where he helped build marketing funnels and improve ROI on ad spend for local e-commerce stores. Over time, he developed a reputation for being both highly analytical and easy to work with&#x2014;traits that would later form the foundation of his consulting practice.</p></section>
 
-  a <i>{</i>
-    <b>color</b><i>:</i> <strong>#fff9</strong><i>;</i>
-    <b>padding</b><i>:</i> <i>.</i><em>2em</em> <em>1em</em> <i>.</i><em>4em</em><i>;</i>
-    <b>font-size</b><i>:</i> <em>90%</em><i>;</i>
-    <b>cursor</b><i>:</i> pointer<i>;</i>
-  <i>}</i>
-<i>}</i></code></pre></div>
-<p>Considering the different formatting options, you can optimize CSS color usage for any need. Use hex for one-off values, RGBA where you require opacity control, HSL for color adjustments, variables for theming, and preprocessor operations for transformations. With the right format, implementing colors in CSS becomes much more flexible and manageable.</p>
-<p>Following these simple tips will ensure you have a tightly edited, flexible, and foolproof palette ready for your next web project.</p>
-<blockquote><p>Focus on one dominant hue &#x2014; Pick one main color and derive the rest of the palette from it. This creates cohesion.</p></blockquote>
+<section><h2>Areas of Expertise</h2>
+<p>Simon offers consulting services to startups, agencies, NGOs, and enterprise clients in the following areas:</p>
+<ul><li><p><strong>Search Engine Optimization (SEO)</strong></p>
+<ul><li><p>Technical SEO audits</p></li>
+<li><p>Keyword research and content strategy</p></li>
+<li><p>Link building and outreach campaigns</p></li>
+<li><p>Local SEO optimization</p></li></ul></li>
+<li><p><strong>Pay-Per-Click (PPC) Advertising</strong></p>
+<ul><li><p>Google Ads and Facebook Ads</p></li>
+<li><p>A/B testing and performance tracking</p></li>
+<li><p>Retargeting and funnel optimization</p></li></ul></li>
+<li><p><strong>Content Marketing</strong></p>
+<ul><li><p>SEO-optimized blog strategies</p></li>
+<li><p>Email marketing campaigns</p></li>
+<li><p>Landing page optimization</p></li></ul></li>
+<li><p><strong>Web Analytics</strong></p>
+<ul><li><p>Google Analytics 4 (GA4) implementation</p></li>
+<li><p>Conversion rate optimization (CRO)</p></li>
+<li><p>Dashboard creation and custom reporting</p></li></ul></li></ul>
+<blockquote><p>&#x201c;Digital marketing isn&#x2019;t about traffic. It&#x2019;s about the <em>right</em> traffic. I help businesses attract, engage, and convert with purpose.&#x201d; &#x2013; Simon Ngoma</p></blockquote>
+</section>
 
-<div class="pink"><pre><code language="*"><sup>/* Tab styling */</sup>
-<i>[</i><b>role</b><i>=</i>tablist<i>]</i> <i>{</i>
-  <b>background</b><i>:</i> <b>rgba</b><i>(</i><em>0</em><i>,</i> <em>0</em><i>,</i> <em>0</em><i>,</i> <i>.</i><em>7</em><i>)</i><i>;</i>
-  <b>background-size</b><i>:</i> <em>3.5em</em><i>;</i>
-  <b>padding</b><i>:</i> <i>.</i><em>7em</em> <em>1.3em</em> <em>0</em><i>;</i>
-  <b>overflow</b><i>:</i> hidden<i>;</i>
-  <b>display</b><i>:</i> flex<i>;</i>
-<i>}</i></code></pre></div></section>
+<section><h2>Recent Projects</h2>
+<p>Simon recently led SEO efforts for a regional logistics startup, helping increase organic traffic by <strong>275%</strong> over six months. He performed a full technical audit, implemented schema markup, optimized over 80 content pages, and trained their internal team on best practices.</p>
+<p>He also designed and managed a multi-channel campaign for a fintech app targeting East African millennials. The campaign resulted in <strong>18,000+ new installs</strong>, with a customer acquisition cost 22% lower than projected.</p>
+<div class="blue"><pre><code language="js"><strong>function</strong> <b>toggleAttr</b><i>(</i>el<i>,</i> name<i>,</i> flag<i>)</i> <i>{</i>
+  flag <i>?</i> <b>el</b><i>.</i><b>setAttribute</b><i>(</i>name<i>,</i> <em>1</em><i>)</i> <i>:</i>  <b>el</b><i>.</i><b>removeAttribute</b><i>(</i>name<i>)</i>
+<i>}</i>
 
-<section><h2>The best CSS color formats for different needs</h2>
-<p>When adding color in CSS, you have a few formatting options to choose from. Each has their own strengths depending on the use case. For specifying plain color values, hex codes are the usual default.</p>
-<figure><img loading="lazy" src="img/colors-3.png"></figure>
-<p>They allow for millions of specific color values in a compact 6-character string. But RGB and HSL values also have advantages. RGB provides an easy way to adjust opacity with the alpha channel. And HSL makes it simple to tweak hue, saturation and lightness independently.</p>
-<div class="blue"><pre><code language="css"><sup>/* Tab styling */</sup>
-<i>[</i><b>role</b><i>=</i>tablist<i>]</i> <i>{</i>
-  <b>background</b><i>:</i> <b>rgba</b><i>(</i><em>0</em><i>,</i> <em>0</em><i>,</i> <em>0</em><i>,</i> <i>.</i><em>7</em><i>)</i><i>;</i>
-  <b>background-size</b><i>:</i> <em>3.8em</em><i>;</i>
-<dfn>  <b>padding</b><i>:</i> <i>.</i><em>7em</em> <em>1.3em</em> <em>0</em><i>;</i></dfn>
-<dfn>  <b>overflow</b><i>:</i> hidden<i>;</i></dfn>
-<dfn>  <b>display</b><i>:</i> flex<i>;</i></dfn>
+<strong>function</strong> <b>restoreTabs</b><i>(</i>flags<i>)</i> <i>{</i>
+  <strong>const</strong> <b>panels</b> <i>=</i> <i>&#x24;</i><i>&#x24;</i><i>(</i><em>&apos;[role=tabpanel]&apos;</em><i>)</i>
 
-  a <i>{</i>
-    <b>color</b><i>:</i> <strong>#fff9</strong><i>;</i>
-    <b>padding</b><i>:</i> <i>.</i><em>2em</em> <em>1em</em> <i>.</i><em>4em</em><i>;</i>
-    <b>font-size</b><i>:</i> <em>90%</em><i>;</i>
-    <b>cursor</b><i>:</i> pointer<i>;</i>
-  <i>}</i>
-<i>}</i></code></pre></div>
-<p>For colors tied to theme values, CSS custom properties (variables) are extremely useful. You can update colors site-wide just by changing the variable values. Preprocessors like Sass take this a step further, allowing color operations like lightening and darkening right in the stylesheet.</p></section>
+  <i>&#x24;</i><i>&#x24;</i><i>(</i><em>&apos;[role=tab]&apos;</em><i>)</i><i>.</i><b>forEach</b><i>(</i><i>(</i>el<i>,</i> i<i>)</i> <i>=</i><i>&gt;</i> <i>{</i>
+    <b>toggleAttr</b><i>(</i>el<i>,</i> <em>&apos;aria-selected&apos;</em><i>,</i> <b>flags</b><i>[</i>i<i>]</i><i>)</i>
+    <b>toggleAttr</b><i>(</i><b>panels</b><i>[</i>i<i>]</i><i>,</i> <em>&apos;hidden&apos;</em><i>,</i> <i>!</i><b>flags</b><i>[</i>i<i>]</i><i>)</i>
+  <i>}</i><i>)</i>
+<i>}</i>
+</code></pre></div></section>
       
     </article>
 
@@ -600,31 +626,13 @@ article {
     <footer>
   <nav>
     <section>
-      <h3>Services</h3>
-      <nav><a href="/social-media">Social Media Marketing</a>
-<a href="/seo-optimization">SEO Optimization</a>
-<a href="/content-strategy">Content Strategy</a>
-<a href="/paid-advertising">Paid Advertising</a></nav>
-    </section>
-    <section>
-      <h3>Case Studies</h3>
-      <nav><a href="/ecommerce-growth">Ecommerce growth</a>
-<a href="/b2b-lead-generation">B2B lead generation</a>
-<a href="/brand-awareness">Brand awareness</a>
-<a href="/social-media-engagement">Social media engagement</a></nav>
-    </section>
-    <section>
-      <h3>Resources</h3>
-      <nav><a href="/blog">Marketing Blog</a>
-<a href="/free-guides">Free guides</a>
-<a href="/marketing-tools">Marketing Tools</a></nav>
-    </section>
-    <section>
       <h3>Contact</h3>
       <nav><a href="//x.com/cymone_rayan"><img src="/img/x-social-media.svg" width="22" height="22" alt="Twitter (X) profile"></a>
-<a href="//linkedin.com/in/ngomasimon3"><img src="/img/linkedin.svg" width="26" height="26" alt="LinkedIn profile"></a>
+<a href="//linkedin.com/in/ngoma-simon-1b0ab2114"><img src="/img/linkedin.svg" width="26" height="26" alt="LinkedIn profile"></a>
 <a href="//calendly.com/ngomasimon3/60min"><img src="/img/call.svg" width="26" height="26" alt="Schedule a call"></a>
-<a href="mailto:ngomasimon3@gmail.com"><img src="/img/gmail.svg" width="26" height="26" alt="Email"></a></nav>
+<a href="mailto:ngomasimon3@gmail.com"><img src="/img/gmail.svg" width="26" height="26" alt="Gmail"></a>
+<a href="//tiktok.com/@simonngoma"><img src="/img/tiktok.svg" width="26" height="26" alt="Tiktok"></a>
+<a href="//tiktok.com/@simonngoma"><img src="/img/Facebook.svg" width="26" height="26" alt="Facebook"></a></nav>
     </section>
   </nav>
   <small>

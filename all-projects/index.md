@@ -1,5 +1,5 @@
 ---
 include: [ gallery, motion ]
-content_collection: blog
+content_collection: projects
 ---
 [page-list.gallery]
