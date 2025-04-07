@@ -9,15 +9,15 @@ inline_css: true
 sections: true
 
 title_template: "Ngoma The Brand / %s"
-og_image: /img/og_emma.png
+og_image: /img/og_ngoma.png
 author: Simon Ngoma
 favicon: /img/favicon.ico
 description: Digital Media Consultant
 port: 8083
 
 # OG image
-origin: https://simple-blog.nuejs.org
-og: /img/og.jpg
+origin: https://ngomathebrand.co.ke/
+og: /img/og_ngoma.png
 
 
 navigation:
