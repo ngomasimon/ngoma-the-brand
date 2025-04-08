@@ -5,7 +5,7 @@ export const lib = [
 {
   name: 'contact-me',
   tagName: 'form',
-  tmpl: '<form autocomplete="on" @submit="0"> <label> <span>Your name</span> <input type="text" name="name" placeholder="Example: John Doe" required> </label> <label> <span>Your email</span> <input type="email" name="email" placeholder="your@email.com" required> </label> <label> <span>Requirements</span> <textarea name="feedback" placeholder="Type here..."></textarea> </label> <button>Lets talk!</button> </form>',
+  tmpl: '<form action="https://formsubmit.co/clintondavid46@gmail.com" method="POST" autocomplete="on" @submit="0"> <label> <span>Your name</span> <input type="text" name="name" placeholder="Example: John Doe" required> </label> <label> <span>Your email</span> <input type="email" name="email" placeholder="your@email.com" required> </label> <label> <span>Requirements</span> <textarea name="feedback" placeholder="Type here..."></textarea> </label> <button type="submit">Lets talk!</button> </form>',
   Impl: class { 
     submit() {
       loadPage('thanks.html')
