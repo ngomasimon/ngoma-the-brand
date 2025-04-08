@@ -22,7 +22,7 @@ var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require
   throw Error('Dynamic require of "' + x + '" is not supported');
 });
 
-// ../../.bun/install/global/node_modules/nuekit/src/browser/mount.js
+// ../../home/codespace/.bun/install/global/node_modules/nuekit/src/browser/mount.js
 var apps = [];
 var remounts = 0;
 async function importAll(hmr_path) {
@@ -41,6 +41,16 @@ async function importAll(hmr_path) {
   }
   return arr;
 }
+async function mount(name, wrap, data) {
+  const lib = await importAll();
+  const comp = lib.find((el) => el.name == name);
+  if (!comp)
+    return;
+  const { createApp } = await import("./nue.js");
+  const app = createApp(comp, data, lib).mount(wrap);
+  app.root.setAttribute("custom", name);
+  return app;
+}
 async function mountAll(hmr_path) {
   const els = document.querySelectorAll("[custom]");
   const lib = els[0] ? await importAll(hmr_path) : [];
@@ -55,10 +65,7 @@ async function mountAll(hmr_path) {
     if (comp) {
       const app = createApp(comp, data, lib).mount(node);
       apps.push(app);
-    } else if (customElements.get(name)) {
-    } else {
-      console.error(`Component not defined: "${name}"`);
-    }
+    } else if (customElements.get(name)) {} else {}
   }
 }
 async function unmountAll() {
@@ -69,5 +76,6 @@ addEventListener("route", () => mountAll());
 addEventListener("DOMContentLoaded", () => dispatchEvent(new Event("route")));
 export {
   unmountAll,
-  mountAll
+  mountAll,
+  mount
 };

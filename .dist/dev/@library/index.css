@@ -1,3 +1,4 @@
+/* @library/index.css */
 body {
   margin: 0;
   padding: 0;
@@ -6,54 +7,54 @@ body {
 }
 
 body > header {
+  position: relative;
   z-index: 2;
   padding: clamp(1.5rem, 3vw, 3rem) clamp(2.5rem, 5vw, 5rem);
-  position: relative;
 }
 
 article {
+  overflow: hidden;
   width: 100%;
   max-width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 article > section:first-of-type {
+  position: relative;
   background-color: #f3f4f3;
   width: 100%;
   max-width: none;
-  position: relative;
 }
 
 article > section:first-of-type p:first-of-type {
-  color: rgba(0, 0, 0, 0);
-  z-index: 1;
-  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .8));
+  position: relative;
+  display: grid;
   grid-template-columns: 1fr 1fr;
+  color: #0000;
+  z-index: 1;
+  overflow: hidden;
+  background: linear-gradient(#0003, #000c);
   height: 60vh;
   min-height: 450px;
   margin: 0;
   padding: 0;
-  display: grid;
-  position: relative;
-  overflow: hidden;
 }
 
 article > section:first-of-type p:first-of-type:before {
   content: "I Make It Work";
+  position: absolute;
   text-align: center;
   color: #fff;
   z-index: 2;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, .5);
-  background: rgba(0, 0, 0, .5);
+  text-shadow: 0 3px 10px #00000080;
+  background: #00000080;
   border-radius: 4px;
   padding: .5rem 1rem;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: 600;
-  position: absolute;
   bottom: clamp(30%, 16vw, 42%);
   left: 50%;
   transform: translateX(-50%);
@@ -61,14 +62,14 @@ article > section:first-of-type p:first-of-type:before {
 
 article > section:first-of-type p:first-of-type:after {
   content: "NGOMA THE BRAND";
+  position: absolute;
   text-align: center;
   color: #fff;
   z-index: 2;
   letter-spacing: -.2px;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, .4);
+  text-shadow: 0 3px 8px #0006;
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 700;
-  position: absolute;
   bottom: clamp(18%, 10vw, 30%);
   left: 50%;
   transform: translateX(-50%);
@@ -76,121 +77,121 @@ article > section:first-of-type p:first-of-type:after {
 
 article > section:first-of-type p:first-of-type > img:nth-child(2):after {
   content: "";
+  position: absolute;
   z-index: 0;
-  background-color: rgba(255, 255, 255, .2);
+  background-color: #fff3;
   width: 2px;
   height: 100%;
-  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
 article > section:first-of-type p:first-of-type a {
+  position: absolute;
+  display: inline-block;
   color: #222;
+  text-decoration: none;
   letter-spacing: .8px;
   z-index: 2;
-  background-color: rgba(255, 255, 255, .95);
+  background-color: #fffffff2;
   border-radius: 8px;
   padding: clamp(.625rem, 1.5vw, 1rem) clamp(1.25rem, 2vw, 2rem);
+  transition: all .3s;
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 600;
-  text-decoration: none;
-  transition: all .3s;
-  display: inline-block;
-  position: absolute;
   bottom: clamp(8%, 6vw, 15%);
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, .15);
+  box-shadow: 0 4px 14px #00000026;
 }
 
 article > section:first-of-type p:first-of-type a:hover {
   background-color: #fff;
   transform: translateX(-50%)scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, .2);
+  box-shadow: 0 6px 18px #0003;
 }
 
 article > section:first-of-type p:first-of-type img {
   object-fit: cover;
+  display: block;
+  position: relative;
   z-index: -1;
   width: 100%;
   height: 100%;
-  display: block;
-  position: relative;
 }
 
 article > section:first-of-type p:nth-of-type(2) {
-  z-index: 1;
+  display: grid;
   grid-template-columns: 1fr;
+  position: relative;
+  z-index: 1;
   gap: clamp(1rem, 2vw, 2rem);
   padding: clamp(1rem, 3vw, 2rem);
-  display: grid;
-  position: relative;
 }
 
 article > section:first-of-type p:nth-of-type(2) img {
+  display: block;
+  position: relative;
   z-index: 1;
   width: 100%;
   height: auto;
   margin-bottom: clamp(1rem, 2vw, 1.5rem);
-  display: block;
-  position: relative;
 }
 
 article > section:first-of-type .gallery {
-  z-index: 1;
-  background: linear-gradient(135deg, rgba(243, 244, 243, .9), rgba(255, 255, 255, .95));
-  border-radius: 12px;
+  display: grid;
   grid-template-columns: 1fr;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, #f3f4f3e6, #fffffff2);
+  border-radius: 12px;
   gap: clamp(1rem, 2vw, 2rem);
   max-width: 100%;
   margin: 0 auto;
   padding: clamp(1rem, 3vw, 2rem);
-  display: grid;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, .05);
+  box-shadow: 0 4px 20px #0000000d;
 }
 
 article > section:first-of-type .gallery li {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 article > section:first-of-type .gallery a {
-  color: inherit;
   text-decoration: none;
-  transition: transform .3s, box-shadow .3s;
+  color: inherit;
   display: block;
+  transition: transform .3s, box-shadow .3s;
 }
 
 article > section:first-of-type .gallery figure {
+  position: relative;
+  overflow: hidden;
+  display: flex;
   background: #fff;
   border-radius: 8px;
   flex-direction: column;
   height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  position: relative;
-  overflow: hidden;
 }
 
 article > section:first-of-type .gallery img {
   object-fit: cover;
+  display: block;
   width: 100%;
   height: auto;
   transition: transform .4s;
-  display: block;
 }
 
 article > section:first-of-type .gallery figcaption {
+  position: relative;
   z-index: 2;
-  background: rgba(255, 255, 255, .9);
+  background: #ffffffe6;
   flex-grow: 1;
   padding: clamp(.75rem, 1vw, 1rem);
-  position: relative;
 }
 
 article > section:first-of-type .gallery time, article > section:first-of-type .gallery p {
@@ -199,7 +200,7 @@ article > section:first-of-type .gallery time, article > section:first-of-type .
 
 article > section:first-of-type .gallery h2 {
   color: #222;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+  text-shadow: 0 1px 3px #0000001a;
   text-align: center;
   margin: 0;
   font-size: clamp(1.25rem, 2vw, 1.5rem);
@@ -209,14 +210,14 @@ article > section:first-of-type .gallery h2 {
 
 article > section:first-of-type .gallery a:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
+  box-shadow: 0 6px 18px #00000026;
 }
 
 article > section:first-of-type .gallery a:hover img {
   transform: scale(1.05);
 }
 
-@media screen and (width <= 767px) {
+@media screen and (max-width: 767px) {
   article > section:first-of-type p:first-of-type {
     grid-template-columns: 1fr;
     height: 50vh;
@@ -249,7 +250,7 @@ article > section:first-of-type .gallery a:hover img {
   }
 }
 
-@media screen and (width <= 480px) {
+@media screen and (max-width: 480px) {
   article > section:first-of-type p:first-of-type:before {
     font-size: clamp(.75rem, 2.5vw, 1rem);
     bottom: clamp(35%, 18vw, 45%);
@@ -267,7 +268,7 @@ article > section:first-of-type .gallery a:hover img {
   }
 }
 
-@media screen and (width >= 768px) {
+@media screen and (min-width: 768px) {
   article > section:first-of-type p:first-of-type {
     grid-template-columns: 1fr 1fr;
     height: 70vh;
@@ -279,7 +280,7 @@ article > section:first-of-type .gallery a:hover img {
   }
 }
 
-@media screen and (width >= 1024px) {
+@media screen and (min-width: 1024px) {
   article > section:first-of-type p:first-of-type {
     height: 85vh;
     min-height: 650px;
@@ -302,7 +303,7 @@ article > section:first-of-type .gallery a:hover img {
   }
 }
 
-@media screen and (width >= 1440px) {
+@media screen and (min-width: 1440px) {
   article > section:first-of-type p:first-of-type {
     height: 100vh;
     min-height: 800px;

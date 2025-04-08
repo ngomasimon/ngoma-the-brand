@@ -1,4 +1,4 @@
-// ../../.bun/install/global/node_modules/nuekit/src/browser/view-transitions.js
+// ../../home/codespace/.bun/install/global/node_modules/nuekit/src/browser/view-transitions.js
 function $(query, root = document) {
   return root.querySelector(query);
 }
@@ -42,7 +42,7 @@ function onclick(root, fn) {
     if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || !path || path[0] == "#" || path?.includes("//") || path?.startsWith("mailto:") || name?.includes(".") && !name?.endsWith(".html") || !!target)
       return;
     if (path != location.pathname)
-      fn(path, el);
+      fn(el.pathname, el);
     e.preventDefault();
   });
 }
@@ -60,8 +60,7 @@ function setActive(path, attrname = "aria-current") {
     }
   });
 }
-var is_browser = typeof window == "object";
-if (is_browser) {
+function setupTransitions() {
   if (!document.startViewTransition) {
     document.startViewTransition = (fn) => fn();
   }
@@ -86,9 +85,19 @@ if (is_browser) {
     }
   });
 }
+function sameKids(kids_a, kids_b) {
+  if (kids_a.length != kids_b.length)
+    return false;
+  for (let i = 0;i < kids_a.length; i++) {
+    if (kids_a[i].tagName != kids_b[i].tagName)
+      return false;
+  }
+  return true;
+}
 function simpleDiff(a, b, ignore_main) {
-  a.classList.value = b.classList.value;
-  if (a.children.length == b.children.length) {
+  if (!a || !b)
+    return true;
+  if (sameKids(a.children, b.children)) {
     [...a.children].forEach((el, i) => {
       if (!(ignore_main && el.tagName == "MAIN"))
         updateBlock(el, b.children[i]);
@@ -165,7 +174,10 @@ function loadSheet(path, fn) {
   $("head").appendChild(el);
   el.onload = fn;
 }
+if (typeof window == "object")
+  setupTransitions();
 export {
+  setupTransitions,
   setActive,
   onclick,
   loadPage,

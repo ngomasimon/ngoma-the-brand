@@ -1,14 +1,15 @@
+/* @library/content.css */
 article a {
   text-decoration: underline var(--main-500) 1px;
   text-underline-offset: 3px;
   color: var(--gray-800);
   font-weight: 500;
+}
 
-  &:hover {
-    text-decoration-color: var(--main-600);
-    color: #000;
-    text-decoration-thickness: 2px;
-  }
+article a:hover {
+  text-decoration-color: var(--main-600);
+  text-decoration-thickness: 2px;
+  color: #000;
 }
 
 h2 {
@@ -42,18 +43,19 @@ blockquote {
   text-wrap: balance;
   margin: 2.5em 0;
   padding-left: 1.5em;
+}
 
-  & p {
-    color: var(--gray-900);
-    font-size: 140%;
-    font-weight: 600;
-    line-height: 1.5;
-  }
+blockquote p {
+  color: var(--gray-900);
+  font-size: 140%;
+  font-weight: 600;
+  line-height: 1.5;
+}
 
-  & strong {
-    background-color: var(--marker);
-    font-weight: inherit;
-    margin-inline: -.2em;
-    padding: .1em .2em;
-  }
+blockquote strong {
+  background-color: var(--marker);
+  font-weight: inherit;
+  margin-inline-start: -.2em;
+  margin-inline-end: -.2em;
+  padding: .1em .2em;
 }

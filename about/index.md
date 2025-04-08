@@ -167,6 +167,7 @@ One of my key areas of focus is leveraging technology to bridge gaps in educatio
 ## Updates
 
 ### Modules
+- Get free modules for your business:
 - Free Marketing Audit and 45 Day Plan
 - Free Business Modules
 

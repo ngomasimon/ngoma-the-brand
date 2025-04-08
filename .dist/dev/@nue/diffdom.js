@@ -1,4 +1,4 @@
-// ../../.bun/install/global/node_modules/diff-dom/dist/index.js
+// ../../home/codespace/.bun/install/global/node_modules/diff-dom/dist/index.js
 var __assign = function() {
   __assign = Object.assign || function __assign(t) {
     var arguments$1 = arguments;
@@ -1446,14 +1446,10 @@ var DEFAULT_OPTIONS = {
     node.data = newValue;
     return;
   },
-  preVirtualDiffApply: function() {
-  },
-  postVirtualDiffApply: function() {
-  },
-  preDiffApply: function() {
-  },
-  postDiffApply: function() {
-  },
+  preVirtualDiffApply: function() {},
+  postVirtualDiffApply: function() {},
+  preDiffApply: function() {},
+  postDiffApply: function() {},
   filterOuterDiff: null,
   compress: false,
   _const: false,
