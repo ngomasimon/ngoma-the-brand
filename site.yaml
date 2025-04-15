@@ -27,7 +27,6 @@ navigation:
     - Services: /all-services/
     - Projects: /all-projects/
     - Contact: /contact/
-    - Terms of Service: /terms-of-service/
   logo: /img/avatar.jpg
   menu: /img/burger-menu.svg
 
